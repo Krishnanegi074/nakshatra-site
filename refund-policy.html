@@ -14,24 +14,20 @@
 <link rel="stylesheet" href="style.css">
 <style>
 :root {
-  --navy-0: #0d0820; --navy-1: #1b1032; --navy-2: #241640;
-  --plum: #6c4e8c; --plum-light: #9b7ec0;
-  --gold: #c9a15f; --gold-bright: #e8c687;
-  --text: #f3eefb; --text-dim: #cbc0e6; --text-faint: #b6acc9;
-  --surface: rgba(255,255,255,0.06); --surface-2: rgba(255,255,255,0.10);
-  --border: rgba(232,198,135,0.18); --border-strong: rgba(232,198,135,0.3);
-  --success: #74d6a3; --danger: #ef7f7f;
+  --navy-0: #3a1420; --navy-1: #fffdf8; --navy-2: #fff4e0;
+  --plum: #b4533c; --plum-light: #7a3a00;
+  --gold: #e8890c; --gold-bright: #a14a00;
+  --text: #3a1420; --text-dim: #6a4a52; --text-faint: #79585f;
+  --surface: #ffffff; --surface-2: #fff4e0;
+  --border: rgba(94,52,38,0.16); --border-strong: rgba(94,52,38,0.3);
+  --success: #0f7a43; --danger: #a31d15;
   --radius: 18px; --radius-sm: 12px;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  background:
-    radial-gradient(ellipse 1200px 800px at 15% -10%, #2c1a4d 0%, transparent 55%),
-    radial-gradient(ellipse 1200px 800px at 100% 0%, #3a1f52 0%, transparent 45%),
-    linear-gradient(180deg, var(--navy-0) 0%, var(--navy-1) 45%, #100a24 100%);
-  background-attachment: fixed;
+  background: #fbf6ea;
   color: var(--text-dim);
   font-family: 'Poppins', 'Segoe UI', system-ui, -apple-system, sans-serif;
   line-height: 1.65;
@@ -44,7 +40,7 @@ a { color: var(--gold-bright); }
 
 header.top {
   position: sticky; top: 0; z-index: 10; backdrop-filter: blur(10px);
-  background: rgba(10,6,22,0.82); border-bottom: 1px solid var(--border);
+  background: rgba(251,246,234,0.94); border-bottom: 1px solid var(--border);
   padding: 16px 24px;
 }
 header.top .wrap { display: flex; align-items: center; justify-content: space-between; max-width: 760px; }
@@ -77,7 +73,7 @@ section.block { margin: 40px 0; }
 section.block h2 { font-size: 1.4rem; margin-bottom: 14px; }
 
 .demo-banner {
-  background: rgba(240,197,107,0.10); border: 1px solid var(--border-strong);
+  background: rgba(232,137,12,0.10); border: 1px solid var(--border-strong);
   border-radius: var(--radius-sm); padding: 14px 18px; margin: 0 0 28px;
   color: var(--gold-bright); font-size: 0.92rem; font-weight: 500;
   display: flex; align-items: center; gap: 10px;
@@ -99,7 +95,7 @@ table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.92r
 th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
 th { color: var(--gold-bright); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; }
 
-.callout { border-left: 3px solid var(--gold); background: rgba(201,161,95,0.07); border-radius: 0 12px 12px 0; padding: 14px 18px; margin: 20px 0; font-size: 0.92rem; }
+.callout { border-left: 3px solid var(--gold); background: rgba(232,137,12,0.07); border-radius: 0 12px 12px 0; padding: 14px 18px; margin: 20px 0; font-size: 0.92rem; }
 .callout strong { color: var(--gold-bright); }
 
 .pagenav { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px 18px; }
@@ -116,8 +112,8 @@ footer.site a:hover { color: var(--gold-bright); }
 
 .cta-block { text-align: center; margin: 44px 0 8px; }
 .btn {
-  display: inline-block; background: linear-gradient(135deg, var(--gold-bright), var(--gold));
-  color: #2a1b0a; font-weight: 700; font-family: 'Cinzel', serif; font-size: 0.95rem;
+  display: inline-block; background: linear-gradient(135deg, #ffb246, var(--gold));
+  color: #3a1420; font-weight: 700; font-family: 'Cinzel', serif; font-size: 0.95rem;
   padding: 14px 30px; border-radius: 999px; text-decoration: none;
 }
 </style>
@@ -130,12 +126,12 @@ footer.site a:hover { color: var(--gold-bright); }
     <a href="index.html" class="nk-logo" aria-label="Nakshatra home">
       <svg width="30" height="30" viewBox="0 0 56 56" aria-hidden="true">
         <defs>
-          <linearGradient id="navGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e8c687"/><stop offset="100%" stop-color="#c9a15f"/></linearGradient>
+          <linearGradient id="navGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ffb246"/><stop offset="100%" stop-color="#c4690a"/></linearGradient>
           <mask id="navMask"><rect width="56" height="56" fill="white"/><circle cx="32" cy="20" r="15" fill="black"/></mask>
         </defs>
         <circle cx="24" cy="23" r="17" fill="url(#navGold)" mask="url(#navMask)"/>
         <circle cx="44" cy="38" r="3" fill="url(#navGold)"/><circle cx="50" cy="30" r="1.8" fill="url(#navGold)"/>
-        <line x1="44" y1="38" x2="50" y2="30" stroke="#e8c687" stroke-width="1.2" opacity="0.6"/>
+        <line x1="44" y1="38" x2="50" y2="30" stroke="#c4690a" stroke-width="1.2" opacity="0.6"/>
       </svg>
       <span class="nk-logo-word">NAKSHATRA</span>
     </a>
