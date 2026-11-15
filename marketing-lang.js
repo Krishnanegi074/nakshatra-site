@@ -7,15 +7,13 @@
    terms.html), AFTER marketing-i18n.js (which defines window.NK_I18N)
    and AFTER main.js in each page's script order.
 
-   This mirrors the app's own anonymous-visitor language handling
-   (app/app.js's state.lang / app/i18n.js's tr()): browser-language is used
-   ONLY to pick a sensible default, switching is in-memory for this page
-   view, and nothing is persisted — these are unauthenticated static pages
-   with no signed-in profile to persist a choice into (the app itself only
-   persists a choice server-side for a SIGNED-IN user; see
-   backend/sql/008_preferred_lang.sql). Reloading or navigating to another
-   marketing page resets to the browser-detected default, same as the app's
-   own pre-auth screens.
+   Language rules (same as the app, app/app.js): English is the default for
+   every visitor; the browser language is NOT consulted. Hindi appears only
+   after the person picks it with the globe button. The choice is saved in the
+   browser under ONE shared localStorage key ("nakshatra.lang"), which the app
+   also reads and writes, so every page and the app stay in step until the
+   person changes it. Storage is read/written inside try/catch, so with storage
+   blocked (private browsing) the pages simply stay English.
 
    Markup contract, per page:
      <div class="nk-lang-toggle-wrap">
@@ -38,17 +36,18 @@
 (function () {
   'use strict';
 
-  function detectDefaultLang() {
-    try {
-      var langs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language];
-      for (var i = 0; i < langs.length; i++) {
-        if (langs[i] && /^hi/i.test(langs[i])) return 'hi';
-      }
-    } catch (e) { /* navigator unavailable — fall through to English */ }
-    return 'en';
+  // English is the default for every visitor (the browser language is NOT consulted).
+  // Hindi appears only after the person picks it; the choice is kept under ONE shared
+  // localStorage key, also used by the app (app/app.js), so every page agrees.
+  var LANG_KEY = 'nakshatra.lang';
+  function readSavedLang() {
+    try { return localStorage.getItem(LANG_KEY) === 'hi' ? 'hi' : 'en'; } catch (e) { return 'en'; }
+  }
+  function saveLang(lang) {
+    try { localStorage.setItem(LANG_KEY, lang); } catch (e) { /* storage blocked: not remembered */ }
   }
 
-  var currentLang = detectDefaultLang();
+  var currentLang = readSavedLang();
 
   function dict(lang) {
     return (window.NK_I18N && window.NK_I18N[lang]) || {};
@@ -117,6 +116,7 @@
         b.addEventListener('click', function (e) {
           e.stopPropagation();
           applyLang(b.getAttribute('data-lang'));
+          saveLang(currentLang);
           closeAllMenus();
         });
       });

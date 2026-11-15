@@ -5645,6 +5645,15 @@ async function purchasePlayProduct(productId) {
 }
 
 // ================= STATE =================
+// One shared language key for the website pages (marketing-lang.js) and this app.
+const LANG_STORAGE_KEY = "nakshatra.lang";
+function readSavedLang() {
+  try { return localStorage.getItem(LANG_STORAGE_KEY) === "hi" ? "hi" : "en"; } catch (e) { return "en"; }
+}
+function saveLang(lang) {
+  try { localStorage.setItem(LANG_STORAGE_KEY, lang === "hi" ? "hi" : "en"); } catch (e) { /* storage blocked: the choice just is not remembered */ }
+}
+
 const state = {
   user: null,
   authMode: "signup",
@@ -5701,10 +5710,11 @@ const state = {
   // every visit to screen-gift-send) and IS reset on logout, since it's private,
   // account-scoped data pulled straight from the signed-in user's own rows.
   sentGifts: [],
-  // Language: detect once from the browser as a nice default, but this is NOT
-  // persisted (no localStorage — see the top-of-file note on why artifacts must
-  // avoid browser storage) so it resets to the detected default each fresh load.
-  lang: (typeof navigator !== "undefined" && /^hi/i.test(navigator.language || "")) ? "hi" : "en",
+  // Language: English by default for every visitor (the browser language is NOT consulted).
+  // Hindi appears only after the person picks it; that choice is kept in ONE shared
+  // localStorage key ("nakshatra.lang", also read by marketing-lang.js) so every page and
+  // the app agree. Read in a try/catch: with storage blocked (private browsing) it is English.
+  lang: readSavedLang(),
   // Astrologer chat (Phase 4, demo): a personal conversation belongs to the signed-in
   // user, so — unlike giftCodes/communityFeed below — this DOES reset on logout.
   chats: {}, // { [astrologerId]: { messages: [{from:"user"|"astro", text}] } }
@@ -5832,11 +5842,10 @@ async function loadUserDataFromBackend() {
   if (profileRes.data) {
     state.user = { name: profileRes.data.name, email: profileRes.data.email };
     // Restore this signed-in user's own saved language choice (see
-    // sql/008_preferred_lang.sql) rather than leaving whatever the
-    // browser-detected default happened to apply at page load — e.g. a
-    // Hindi-speaking user opening the site in a browser set to English
-    // still sees their own chosen language, not English, once their
-    // session loads. Only actually re-render if it differs — applyLanguage()
+    // sql/008_preferred_lang.sql) rather than leaving whatever language
+    // this browser had at page load — e.g. a Hindi-speaking user on a new
+    // device still sees their own chosen language, not English, once their
+    // session loads (applyLanguage() also writes it to the shared key). Only actually re-render if it differs — applyLanguage()
     // does a fair amount of DOM work, no need to redo it for a no-op.
     if (profileRes.data.preferred_lang && profileRes.data.preferred_lang !== state.lang) {
       applyLanguage(profileRes.data.preferred_lang);
@@ -5979,6 +5988,7 @@ function tierDisplayName(key) {
 
 function applyLanguage(lang) {
   state.lang = lang;
+  saveLang(lang); // shared key: keeps the website pages in step (also covers a saved profile language)
   document.documentElement.lang = lang;
   $all("[data-i18n]").forEach((el) => { el.textContent = tr(el.getAttribute("data-i18n")); });
   $all("[data-i18n-html]").forEach((el) => { el.innerHTML = tr(el.getAttribute("data-i18n-html")); });
