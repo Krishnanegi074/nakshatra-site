@@ -897,16 +897,18 @@ body.lg-lock { overflow: hidden; }
 .nk-soon-panel { opacity: 1; }
 .nk-ex:hover { border-color: #e0b47a; box-shadow: 0 6px 18px rgba(58,20,32,.07); }
 .nk-ex .e { display: grid; place-items: center; flex: none; width: 32px; height: 32px; border-radius: 50%; background: #fff6e8; font-size: 15px; }
-.nk-explore { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: 100%; max-width: 760px; margin-top: 24px; }
-.nk-card { position: relative; display: flex; flex-direction: row; align-items: center; gap: 12px; padding: 14px 14px 14px 12px; border-radius: 14px; border: 1px solid #ece4d8; border-left: 4px solid var(--pc); background: #fff; font: inherit; text-align: left; text-decoration: none; color: var(--text); cursor: pointer; box-shadow: 0 1px 2px rgba(58,20,32,.03); opacity: 0; transform: translateY(10px); animation: nkRise .6s cubic-bezier(.2,.7,.2,1) forwards; transition: transform .2s, box-shadow .2s; }
+.nk-explore { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: 100%; max-width: 640px; margin-top: 24px; }
+.nk-explore-h { grid-column: 1 / -1; margin: 0 0 2px; font-size: 11px; line-height: 1.2; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #8a6a52; text-align: left; }
+.nk-card { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; min-height: 128px; padding: 16px; border-radius: 16px; border: 1px solid color-mix(in srgb, var(--pc) 22%, #fff); background: linear-gradient(165deg, var(--pt) 0%, #fff 78%); font: inherit; text-align: left; text-decoration: none; color: var(--text); cursor: pointer; box-shadow: 0 1px 2px rgba(58,20,32,.04), 0 8px 20px rgba(58,20,32,.06); opacity: 0; transform: translateY(10px); animation: nkRise .6s cubic-bezier(.2,.7,.2,1) forwards; transition: transform .2s, box-shadow .2s, border-color .2s; }
 .nk-card:nth-child(1) { animation-delay: .75s; } .nk-card:nth-child(2) { animation-delay: .82s; } .nk-card:nth-child(3) { animation-delay: .89s; } .nk-card:nth-child(4) { animation-delay: .96s; } .nk-card:nth-child(5) { animation-delay: 1.03s; } .nk-card:nth-child(6) { animation-delay: 1.1s; }
-.nk-card:hover { box-shadow: 0 8px 20px rgba(58,20,32,.08); transform: translateY(-2px); }
-.nk-card .ic { flex: none; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; background: var(--pt); color: var(--pc); }
-.nk-card .ic svg { width: 22px; height: 22px; }
-.nk-card .tx { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
-.nk-card b { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 14.5px; line-height: 1.25; color: var(--maroon); }
+.nk-card:hover, .nk-card:focus-visible { box-shadow: 0 1px 2px rgba(58,20,32,.05), 0 14px 28px rgba(58,20,32,.12); transform: translateY(-3px); border-color: color-mix(in srgb, var(--pc) 50%, #fff); }
+.nk-card:hover .chev, .nk-card:focus-visible .chev { background: var(--pc); color: #fff; }
+.nk-card .ic { flex: none; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 14px; background: #fff; color: var(--pc); box-shadow: 0 0 0 1px color-mix(in srgb, var(--pc) 35%, #fff); }
+.nk-card .ic svg { width: 24px; height: 24px; }
+.nk-card .tx { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.nk-card b { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 15.5px; line-height: 1.25; color: var(--maroon); }
 .nk-card small { font-size: 12.5px; line-height: 1.35; color: #5c4148; }
-.nk-card .chev { flex: none; font-size: 20px; line-height: 1; color: var(--pc); }
+.nk-card .chev { position: absolute; top: 12px; right: 12px; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 1px color-mix(in srgb, var(--pc) 35%, #fff); font-size: 18px; line-height: 1; color: var(--pc); transition: background .2s, color .2s; }
 .nk-card .soon { padding: 1px 7px; border-radius: 999px; background: rgba(94,52,38,.07); font-size: 9.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #6e5459; }
 .nk-sun { --pc: #c2410c; --pt: #fff1e8; } .nk-moon { --pc: #3f5f86; --pt: #eef3f9; } .nk-mercury { --pc: #15803d; --pt: #ebf7ef; } .nk-jupiter { --pc: #a16207; --pt: #fdf6e3; } .nk-venus { --pc: #be185d; --pt: #fdeef5; } .nk-saturn { --pc: #1e3a8a; --pt: #edf1fb; }
 .nk-below { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 22px; }
@@ -925,10 +927,10 @@ body.lg-lock { overflow: hidden; }
 .nk-flinks { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 18px; margin-bottom: 6px; font-size: 13px; }
 .nk-flinks a { display: inline-flex; align-items: center; min-height: 32px; color: #5c4148; text-decoration: none; }
 .nk-flinks a:hover { color: var(--gold-bright); text-decoration: underline; }
-@media (min-width: 760px) { .nk-explore { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 860px; } }
+@media (min-width: 600px) { .nk-explore { grid-template-columns: repeat(3, minmax(0, 1fr)); } .nk-card { min-height: 136px; } .nk-card .ic { width: 46px; height: 46px; } }
 @media (min-width: 900px) { #screen-dashboard.nk-home { padding: 40px 32px 20px; } .nk-examples { grid-template-columns: 1fr 1fr; } .nk-wheel { width: min(860px, 92vh); } }
 @media (max-width: 599px) { .nk-examples .nk-ex:nth-child(n+3) { display: none; } }
-@media (max-width: 420px) { .nk-card { flex-direction: column; align-items: flex-start; gap: 8px; } .nk-card .chev { display: none; } .nk-mode svg { display: none; } .nk-mode button { padding: 0 11px; } }
+@media (max-width: 420px) { .nk-mode svg { display: none; } .nk-mode button { padding: 0 11px; } }
 @media (max-width: 340px) { .nk-explore { grid-template-columns: minmax(0, 1fr); } }
 
 /* ---------- login window ---------- */
@@ -1038,11 +1040,13 @@ body.lg-lock { overflow: hidden; }
   .nk-wheel, .nk-ex, .nk-card { opacity: 1; transform: none; animation: none; }
   .nk-wheel { opacity: .38; transform: translate(-50%, -50%); }
   .w-outer, .w-inner, .w-moon, .nk-eyebrow i, .nk-soon-panel, .lg-scrim, .lg-dialog, .lg-panel { animation: none !important; }
-  .lg-prog i::after, .nk-send, .nk-card, .lg-cta { transition: none; }
+  .lg-prog i::after, .nk-send, .nk-card, .nk-card .chev, .lg-cta { transition: none; }
   .lg-calc-list li.on::before { animation: none; border-color: var(--saffron); }
 }
 @media (forced-colors: active) {
   .nk-box, .nk-ex, .nk-card, .nk-store, .lg-dialog, .lg-fi, .lg-set select { border: 1px solid CanvasText; }
+  .nk-card .ic, .nk-card .chev { border: 1px solid CanvasText; }
+  .nk-card:hover .chev, .nk-card:focus-visible .chev { background: Highlight; color: HighlightText; }
   .nk-wheel { display: none; }
   .lg-prog i.on, .lg-prog i.cur { background: Highlight; }
 }
@@ -1344,7 +1348,8 @@ body.lg-lock { overflow: hidden; }
         <button class="nk-ex" type="button"><span class="e" aria-hidden="true">💰</span><span data-i18n="nk.ex4">Which period is best for buying a home?</span></button>
       </div>
     </div>
-    <nav class="nk-explore" data-i18n-aria="nk.explore.aria" aria-label="Explore Nakshatra">
+    <nav class="nk-explore" aria-labelledby="nk-ex-h">
+      <h2 class="nk-explore-h" id="nk-ex-h" data-i18n="nk.explore.aria">Explore Nakshatra</h2>
       <button class="nk-card nk-mercury" type="button" data-go="screen-palm"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V12"/><path d="M11 11V4a1.5 1.5 0 0 1 3 0v7"/><path d="M14 11V5.5a1.5 1.5 0 0 1 3 0V13"/><path d="M17 9.5a1.5 1.5 0 0 1 3 0V15a7 7 0 0 1-7 7h-1a7 7 0 0 1-6-3.4L3.6 15a1.6 1.6 0 0 1 2.7-1.7L8 15.5"/></svg></span><span class="tx"><b data-i18n="nk.card.palm">Palm reading</b><small data-i18n="nk.card.palm.d">Photo stays on your phone</small></span><span class="chev" aria-hidden="true">›</span></button>
       <button class="nk-card nk-jupiter" type="button" data-go="screen-fullreport"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h8l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M15 3v4h4M9.5 12h6M9.5 15.5h6M9.5 8.5h3"/></svg></span><span class="tx"><b data-i18n="nk.card.reports">Reports</b><small data-i18n="nk.card.reports.d">Your full written reading</small></span><span class="chev" aria-hidden="true">›</span></button>
       <button class="nk-card nk-moon" type="button" data-go="screen-horoscope"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/><path d="M17 3.5l.7 1.8 1.8.7-1.8.7L17 8.5l-.7-1.8-1.8-.7 1.8-.7z"/></svg></span><span class="tx"><b data-i18n="nk.card.horo">Horoscopes</b><small data-i18n="nk.card.horo.d">Weekly, from your birth chart</small></span><span class="chev" aria-hidden="true">›</span></button>
