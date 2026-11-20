@@ -71,7 +71,9 @@ window.NK_I18N = {
     "pricing.tier_btn": "Choose Plan",
 
     /* ---------- Kundli Matching page ---------- */
-    "km.eyebrow": "Coming to Nakshatra",
+    "km.eyebrow": "Free on Nakshatra",
+    "km.cta": "Match kundlis free",
+    "km.cta_note": "Free · no sign-up needed · nothing is saved",
     "km.hero_title_html": "Real Kundli Matching,<br>gently done in full.",
     "km.hero_sub": "The traditional Ashtakoot Guna Milan for marriage compatibility — the same 36-point, 8-koota system a family astrologer would use, calculated from real planetary positions, never estimated.",
     "km.email_label": "Email address",
@@ -364,7 +366,9 @@ window.NK_I18N = {
     "pricing.tier_btn": "योजना चुनें",
 
     /* ---------- Kundli Matching page ---------- */
-    "km.eyebrow": "नक्षत्र पर जल्द आ रहा है",
+    "km.eyebrow": "नक्षत्र पर मुफ़्त",
+    "km.cta": "कुंडली मिलान मुफ़्त करें",
+    "km.cta_note": "मुफ़्त · साइन-अप की ज़रूरत नहीं · कुछ भी सेव नहीं होता",
     "km.hero_title_html": "असली कुंडली मिलान,<br>पूरी सावधानी से, पूरा।",
     "km.hero_sub": "विवाह अनुकूलता के लिए पारंपरिक अष्टकूट गुण मिलान — वही 36-अंक, 8-कूट प्रणाली जो एक पारिवारिक ज्योतिषी इस्तेमाल करेंगे, वास्तविक ग्रह स्थितियों से गणना की गई, कभी अनुमान से नहीं।",
     "km.email_label": "ईमेल पता",

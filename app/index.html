@@ -1144,6 +1144,127 @@ body.lg-lock { overflow: hidden; }
 @media (max-width: 360px) { .kd-facts { grid-template-columns: minmax(0, 1fr); } .kd-tabs button { padding: 0 10px; } }
 @media (prefers-reduced-motion: reduce) { .kd-tabs button { transition: none; } }
 
+/* ---------- kundli matching ---------- */
+.mt-wrap { max-width: 892px; margin: 0 auto; padding: 18px 16px 44px; color: var(--maroon); }
+.mt-back { display: inline-flex; align-items: center; gap: 4px; min-height: 44px; margin: 0 0 2px -6px; padding: 0 6px; border: 0; background: none; font: inherit; font-size: 14px; color: #5c4148; cursor: pointer; }
+.mt-kicker { margin: 0; font-size: 11px; line-height: 1.2; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #be185d; }
+.mt-h1 { margin: 6px 0 0; font: 600 clamp(26px, 4.6vw, 34px)/1.2 'Cinzel', Georgia, serif; color: var(--maroon); }
+.mt-sub { margin: 6px 0 0; max-width: 60ch; color: #5c4148; }
+.mt-pair { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; margin-top: 22px; }
+.mt-pcard { min-width: 0; margin: 0; padding: 18px; border-radius: 18px; border: 1px solid #ece4d8; box-shadow: 0 1px 2px rgba(58,20,32,.04), 0 8px 20px rgba(58,20,32,.05); }
+.mt-boy { --c: #1e3a8a; background: linear-gradient(170deg, #edf1fb, #fff 40%); }
+.mt-girl { --c: #be185d; background: linear-gradient(170deg, #fdeef5, #fff 40%); }
+.mt-ph { display: flex; align-items: center; gap: 10px; margin-bottom: 2px; }
+.mt-pi { display: grid; place-items: center; flex: none; width: 36px; height: 36px; border-radius: 12px; background: #fff; color: var(--c); font-size: 18px; box-shadow: 0 0 0 1px color-mix(in srgb, var(--c) 25%, #fff); }
+.mt-ph h2 { margin: 0; font: 600 16px/1.3 'Poppins', system-ui, sans-serif; color: var(--maroon); letter-spacing: 0; text-transform: none; }
+.mt-pcard .lg-row3 { grid-template-columns: minmax(0, .85fr) minmax(0, 1.5fr) minmax(0, 1.1fr); gap: 8px; }
+.mt-pcard .lg-set select { padding-left: 12px; padding-right: 28px; background-position: right 9px center; }
+.mt-pcard > legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.mt-mine { margin-left: auto; min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--c) 30%, #fff); background: #fff; color: var(--c); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; }
+.mt-mine[aria-pressed="true"] { background: var(--c); color: #fff; border-color: var(--c); }
+.mt-pcard .lg-fl { margin: 14px 0 6px; font-size: 13px; }
+.mt-pcard .lg-fl small { font-weight: 400; color: #6e5459; }
+.mt-pcard .lg-set { margin-top: 14px; }
+.mt-pcard .lg-fi { height: 50px; font-size: 15px; border-radius: 12px; }
+.mt-pcard .lg-set select { height: 48px; font-size: 15px; border-radius: 12px; }
+.mt-pcard .lg-chk { min-height: 40px; margin-top: 4px; font-size: 13.5px; color: #5c4148; }
+.mt-pcard .lg-err { margin-top: 4px; min-height: 18px; }
+.mt-pcard .lg-combo .lg-fi { padding-right: 128px; }
+.mt-latlon { position: absolute; right: 10px; top: 14px; padding: 2px 8px; border-radius: 999px; background: #ebf7ef; font-size: 12px; line-height: 1.5; color: #14532d; pointer-events: none; }
+.mt-amp { display: none; }
+.mt-formerr { text-align: center; }
+.mt-cta { display: flex; align-items: center; justify-content: center; width: 100%; max-width: 420px; min-height: 56px; margin: 12px auto 0; border-radius: 14px; border: 1px solid #c4690a; background: #f6a028; color: var(--maroon); font: inherit; font-weight: 600; font-size: 16px; cursor: pointer; }
+.mt-cta.mt-sm { max-width: none; margin: 0; flex: 1; }
+.mt-cta:hover { background: #f19a1c; }
+.mt-fine { margin: 12px 0 0; text-align: center; font-size: 12.5px; line-height: 1.5; color: #6e5459; }
+.mt-wrap :focus-visible, .mt-modal :focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 2px; }
+.mt-hero { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; margin-top: 6px; padding: 22px 18px; border-radius: 22px; background: radial-gradient(120% 120% at 50% 0%, #fdeef5 0%, #fff 60%); border: 1px solid #f6d6e4; }
+.mt-who { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.mt-who.r { justify-content: flex-end; text-align: right; }
+.mt-who b { display: block; font-size: 16px; overflow-wrap: anywhere; }
+.mt-who small { font-size: 12.5px; color: #5c4148; }
+.mt-bub { display: grid; place-items: center; flex: none; width: 44px; height: 44px; border-radius: 50%; color: #fff; font-weight: 600; }
+.mt-bub.boy { background: #1e3a8a; } .mt-bub.girl { background: #be185d; }
+.mt-ring { display: grid; place-items: center; width: 136px; height: 136px; border-radius: 50%; background: conic-gradient(#f6a028 calc(var(--p) * 1%), #f3e6d3 0); }
+.mt-ring > div { display: grid; place-items: center; width: 110px; height: 110px; border-radius: 50%; background: #fff; text-align: center; }
+.mt-ring b { display: block; font: 600 34px/1 'Poppins', system-ui, sans-serif; }
+.mt-ring small { font-size: 11.5px; color: #6e5459; }
+.mt-verdict { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 14px; text-align: center; }
+.mt-vtag { padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; background: #fff4e0; color: #92400e; }
+.mt-vtag.low { background: #fdecec; color: #991b1b; } .mt-vtag.good, .mt-vtag.excellent { background: #e8f6ee; color: #166534; }
+.mt-verdict p { max-width: 62ch; margin: 0; color: #5c4148; }
+.mt-verdict b { color: var(--maroon); }
+.mt-sh { display: flex; align-items: baseline; gap: 8px; margin: 26px 0 10px; font: 600 17px/1.3 'Poppins', system-ui, sans-serif; color: var(--maroon); }
+.mt-sh small { font-size: 12.5px; font-weight: 500; color: #6e5459; }
+.mt-kt { border-radius: 16px; border: 1px solid #ece4d8; overflow: hidden; }
+.mt-kh, .mt-kr { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.3fr); align-items: center; gap: 10px; padding: 10px 14px; }
+.mt-kh { background: #faf7f2; font-size: 12px; font-weight: 600; color: #5c4148; }
+.mt-kr { border-top: 1px solid #ece4d8; font-size: 14px; }
+.mt-kr b { display: block; font-size: 14.5px; } .mt-kr small { font-size: 12px; color: #6e5459; }
+.mt-kr.bad { background: #fffaf2; }
+.mt-pt { display: flex; align-items: center; gap: 8px; }
+.mt-pt i { position: relative; flex: 1; height: 8px; border-radius: 8px; background: #f1e7d7; overflow: hidden; }
+.mt-pt i::after { content: ""; position: absolute; inset: 0; width: var(--w); border-radius: 8px; background: #f6a028; }
+.mt-pt.full i::after { background: #15803d; }
+.mt-pt em { min-width: 52px; font-style: normal; font-size: 13px; font-weight: 600; text-align: right; }
+.mt-dg { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.mt-dc { padding: 14px 16px; border-radius: 14px; border: 1px solid #ece4d8; background: #fff; }
+.mt-dc h3 { margin: 6px 0 0; font: 600 15px/1.3 'Poppins', system-ui, sans-serif; color: var(--maroon); }
+.mt-dc p { margin: 4px 0 0; font-size: 13.5px; line-height: 1.55; color: #5c4148; }
+.mt-dc p b { color: var(--maroon); }
+.mt-ds { display: inline-block; padding: 3px 9px; border-radius: 999px; font-size: 11px; font-weight: 600; background: #e8f6ee; color: #166534; }
+.mt-ds.warn { background: #fff4e0; color: #92400e; } .mt-ds.bad { background: #fdecec; color: #991b1b; }
+.mt-notes { margin: 10px 0 0; padding: 0; list-style: none; font-size: 12.5px; line-height: 1.5; color: #6e5459; }
+.mt-notes li + li { margin-top: 4px; }
+.mt-act { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.mt-ghost { display: flex; align-items: center; justify-content: center; flex: 1; min-height: 56px; border-radius: 14px; border: 1px solid #d9c9b3; background: #fff; color: var(--maroon); font: inherit; font-weight: 600; text-decoration: none; text-align: center; cursor: pointer; }
+.mt-soon { margin: 12px 0 0; padding: 12px 14px; border-radius: 12px; background: #fff8ec; border: 1px solid #f3dcb8; text-align: center; font-size: 14px; color: #5c4148; }
+.mt-modal { position: fixed; inset: 0; z-index: 90; display: grid; place-items: center; padding: 16px; background: rgba(58,20,32,.45); }
+.mt-modal[hidden] { display: none; }
+.mt-sheet { position: relative; width: min(100%, 360px); padding: 22px 20px 18px; border-radius: 20px; background: #fff; text-align: center; }
+.mt-sheet h2 { margin: 0 0 12px; font-size: 17px; color: var(--maroon); }
+.mt-sheet img { display: block; width: 270px; max-width: 100%; height: auto; margin: 0 auto; border-radius: 14px; border: 1px solid #ece4d8; }
+.mt-close { position: absolute; top: 6px; right: 6px; width: 44px; height: 44px; border: 0; border-radius: 50%; background: none; font-size: 26px; line-height: 1; color: #5c4148; cursor: pointer; }
+@media (min-width: 760px) {
+  .mt-pair { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 22px; }
+  .mt-amp { display: grid; place-items: center; position: absolute; left: 50%; top: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%; background: #fff; box-shadow: 0 4px 14px rgba(58,20,32,.12); color: #be185d; font-size: 18px; z-index: 1; }
+  .mt-dg { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .mt-hero { grid-template-columns: 1fr 1fr; grid-template-areas: "ring ring" "a b"; }
+  .mt-ring { grid-area: ring; justify-self: center; }
+  .mt-who { grid-area: a; } .mt-who.r { grid-area: b; }
+  .mt-kh { display: none; }
+  .mt-kr { grid-template-columns: minmax(0, 1fr) auto; row-gap: 4px; }
+  .mt-kr > span:nth-child(2), .mt-kr > span:nth-child(3) { font-size: 12.5px; color: #5c4148; }
+  .mt-kr > span:nth-child(2) { grid-column: 1; } .mt-kr > span:nth-child(3) { grid-column: 2; text-align: right; }
+  .mt-kr .mt-pt { grid-column: 1 / -1; }
+}
+@media (max-width: 380px) { .mt-pcard { padding: 14px; } .mt-pcard .lg-combo .lg-fi { padding-right: 14px; } .mt-latlon { display: none; } }
+@media (forced-colors: active) { .mt-pcard, .mt-kt, .mt-dc, .mt-hero, .mt-cta, .mt-ghost, .mt-mine, .mt-vtag, .mt-ds { border: 1px solid CanvasText; } .mt-pt i::after { background: Highlight; } }
+
+/* ---------- kundli matching: phones (under 600px) ---------- */
+.mt-ph { flex-wrap: wrap; }
+.mt-ph h2 { white-space: nowrap; }
+.mt-mine { white-space: nowrap; }
+.mt-mg { display: block; }
+.mt-mg + .mt-mg { margin-top: 6px; }
+@media (max-width: 599px) {
+  .mt-mine { padding: 0 11px; font-size: 12px; }
+  .mt-pcard .lg-combo .lg-fi { padding-right: 16px; }
+  .mt-latlon { position: static; display: inline-block; margin-top: 8px; }
+  .mt-act { flex-direction: column; }
+  .mt-act .mt-cta.mt-sm, .mt-act .mt-ghost { flex: none; width: 100%; max-width: none; white-space: nowrap; }
+}
+@media (max-width: 520px) {
+  .mt-hero { grid-template-columns: minmax(0, 1fr); grid-template-areas: "ring" "a" "b"; justify-items: center; }
+  .mt-who, .mt-who.r { width: 100%; max-width: 330px; justify-content: flex-start; text-align: left; }
+  .mt-who.r { flex-direction: row-reverse; justify-content: flex-end; }
+  .mt-who > div { min-width: 0; }
+  .mt-who small { display: block; white-space: nowrap; }
+}
+@media (max-width: 380px) { .mt-mine { margin-left: 0; } }
+
 </style>
 </head>
 <body>
@@ -1354,7 +1475,7 @@ body.lg-lock { overflow: hidden; }
       <button class="nk-card nk-jupiter" type="button" data-go="screen-fullreport"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h8l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M15 3v4h4M9.5 12h6M9.5 15.5h6M9.5 8.5h3"/></svg></span><span class="tx"><b data-i18n="nk.card.reports">Reports</b><small data-i18n="nk.card.reports.d">Your full written reading</small></span><span class="chev" aria-hidden="true">›</span></button>
       <button class="nk-card nk-moon" type="button" data-go="screen-horoscope"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/><path d="M17 3.5l.7 1.8 1.8.7-1.8.7L17 8.5l-.7-1.8-1.8-.7 1.8-.7z"/></svg></span><span class="tx"><b data-i18n="nk.card.horo">Horoscopes</b><small data-i18n="nk.card.horo.d">Weekly, from your birth chart</small></span><span class="chev" aria-hidden="true">›</span></button>
       <button class="nk-card nk-sun" type="button" data-go="screen-kundli"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="1"/><path d="M3.5 3.5l17 17M20.5 3.5l-17 17M12 3.5L20.5 12 12 20.5 3.5 12z"/></svg></span><span class="tx"><b data-i18n="nk.card.kundli">Free kundli</b><small data-i18n="nk.card.kundli.d">Your full birth chart</small></span><span class="chev" aria-hidden="true">›</span></button>
-      <a class="nk-card nk-venus" href="https://nakshatra.ind.in/kundli-matching.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="12" r="5.5"/><circle cx="15" cy="12" r="5.5"/></svg></span><span class="tx"><b><span data-i18n="nk.card.match">Kundli matching</span> <span class="soon" data-i18n="nk.soon.tag">Soon</span></b><small data-i18n="nk.card.match.d">36-point guna match, coming soon</small></span><span class="chev" aria-hidden="true">›</span></a>
+      <button class="nk-card nk-venus" type="button" data-nav="screen-match"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="12" r="5.5"/><circle cx="15" cy="12" r="5.5"/></svg></span><span class="tx"><b data-i18n="nk.card.match">Kundli matching</b><small data-i18n="nk.card.match.d">36-point guna match, coming soon</small></span><span class="chev" aria-hidden="true">›</span></button>
       <button class="nk-card nk-saturn" type="button" data-go="screen-report"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9z"/><path d="M9.5 8H14M9.5 10.5H14M11 8c2 0 2 2.5 0 2.5H9.5l3.5 3.5"/></svg></span><span class="tx"><b data-i18n="nk.card.pricing">Pricing</b><small data-i18n="nk.card.pricing.d">Plans for your full report</small></span><span class="chev" aria-hidden="true">›</span></button>
     </nav>
     <div class="nk-below">
@@ -1381,7 +1502,62 @@ body.lg-lock { overflow: hidden; }
     <button id="btn-talk-to-expert" type="button" data-expert-chat hidden tabindex="-1" aria-hidden="true">Expert</button>
   </section>
 
-<!-- ============ FREE KUNDLI ============ -->
+<!-- ============ KUNDLI MATCHING ============ -->
+  <section id="screen-match" class="screen" aria-labelledby="mt-title">
+    <div class="mt-wrap">
+      <div id="mt-formview">
+        <button type="button" class="mt-back" data-back="screen-dashboard"><span aria-hidden="true">‹</span> <span data-i18n="mt.back.home">Home</span></button>
+        <p class="mt-kicker" data-i18n="mt.kicker">Kundli matching</p>
+        <h1 id="mt-title" class="mt-h1" data-i18n="mt.h1">Match two kundlis</h1>
+        <p class="mt-sub" data-i18n="mt.sub">36-guna Ashtakoota matching and a Manglik check for both, worked out from exact Moon positions. Free.</p>
+        <form id="mt-form" novalidate>
+          <div class="mt-pair">
+            <div class="mt-pcard mt-boy" id="mt-side-b" role="group" aria-labelledby="mt-b-title"></div>
+            <span class="mt-amp" aria-hidden="true">♥</span>
+            <div class="mt-pcard mt-girl" id="mt-side-g" role="group" aria-labelledby="mt-g-title"></div>
+          </div>
+          <p class="lg-err mt-formerr" id="mt-err" role="alert"></p>
+          <button class="mt-cta" type="submit" id="mt-go" data-i18n="mt.go">Match kundlis</button>
+        </form>
+        <p class="mt-fine" data-i18n="mt.fine">Matching uses each person's Moon nakshatra, so an exact birth time gives the most reliable result. Nothing is shared without your permission.</p>
+      </div>
+      <div id="mt-resultview" hidden>
+        <button type="button" class="mt-back" id="mt-edit"><span aria-hidden="true">‹</span> <span data-i18n="mt.edit">Edit details</span></button>
+        <h1 class="nk-vh" id="mt-rtitle" tabindex="-1" data-i18n="mt.result.h">Kundli matching result</h1>
+        <div class="mt-hero" id="mt-hero"></div>
+        <div class="mt-verdict"><span class="mt-vtag" id="mt-band"></span><p id="mt-summary"></p></div>
+        <h2 class="mt-sh"><span data-i18n="mt.table.h">Guna milan</span> <small data-i18n="mt.table.sub">8 kootas · 36 points</small></h2>
+        <div class="mt-kt" role="table" aria-labelledby="mt-rtitle">
+          <div class="mt-kh" role="row"><span role="columnheader" data-i18n="mt.col.koota">Koota</span><span role="columnheader" id="mt-col-b"></span><span role="columnheader" id="mt-col-g"></span><span role="columnheader" data-i18n="mt.col.points">Points</span></div>
+          <div id="mt-rows"></div>
+        </div>
+        <h2 class="mt-sh" data-i18n="mt.doshas.h">Doshas</h2>
+        <div class="mt-dg" id="mt-doshas"></div>
+        <ul class="mt-notes" id="mt-notes"></ul>
+        <div class="mt-act">
+          <button type="button" class="mt-cta mt-sm" id="mt-share-btn" data-i18n="mt.share">Share result</button>
+          <button type="button" class="mt-ghost" id="mt-report-btn" aria-controls="mt-soon" aria-expanded="false" data-i18n="mt.report">Get the detailed report</button>
+        </div>
+        <p class="mt-soon" id="mt-soon" role="status" hidden data-i18n="mt.soon">Detailed report is coming soon</p>
+        <p class="mt-fine" data-i18n="mt.disclaimer">Scores follow the classical Ashtakoota tables. A guna score is one part of compatibility, not a promise. For important decisions, also look at both full charts.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="mt-modal" id="mt-share" role="dialog" aria-modal="true" aria-labelledby="mt-share-h" hidden>
+    <div class="mt-sheet">
+      <h2 id="mt-share-h" data-i18n="mt.share.h">Your result card</h2>
+      <img id="mt-share-img" alt="" width="270" height="270">
+      <p class="mt-fine" data-i18n="mt.share.fine">The card shows names, score and the eight koota points. No birth details.</p>
+      <div class="mt-act">
+        <button type="button" class="mt-cta mt-sm" id="mt-share-do" data-i18n="mt.share.send">Share</button>
+        <a class="mt-ghost mt-dl" id="mt-share-dl" download="kundli-matching.png" data-i18n="mt.share.save">Save image</a>
+      </div>
+      <button type="button" class="mt-close" id="mt-share-close" data-i18n-aria="mt.share.close" aria-label="Close">×</button>
+    </div>
+  </div>
+
+  <!-- ============ FREE KUNDLI ============ -->
   <section id="screen-kundli" class="screen" aria-labelledby="kd-title">
     <button type="button" class="kd-back" data-back="screen-dashboard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span data-i18n="kundli.back">Home</span></button>
     <div id="kd-empty" class="card kd-note"><p data-i18n="kundli.empty">Add your birth details to see your kundli.</p><button class="btn btn-primary" type="button" data-open-login="birth" data-i18n="nk.addbirth.short">Add birth details</button></div>
@@ -2949,6 +3125,216 @@ const KundliEngine = (function () {
   return { GRAHAS, SIGN_LORD, computeKundli, evaluateYogas, getTransits, buildDasha, antardashasOf, pratyantardashasOf, dignityOf, navamsaSign, dasamsaSign, meanNodeTropical, trueNodeTropical, siderealLon, houseFrom };
 })();
 // ===== END KUNDLI ENGINE =====
+
+</script>
+<script>
+// Ashtakoota (36-point) matching and Manglik check. Pure functions: no astronomy of its own.
+// It reads two charts made by KundliEngine.computeKundli (the same engine as the free kundli: Lahiri, sidereal), so there is
+// only one astronomy path. Nothing here touches the screen or the network.
+//
+// Sources and how each rule was settled:
+//   Varna, Tara, Graha Maitri ....... the classical tables (matched Drik Panchang on 218 of 218 couples).
+//   Gana ............................ Drik's (boy, girl) values, which are not symmetric (Manushya-Deva 5, Rakshasa-Deva 1).
+//   Vashya, Yoni .................... tables READ FROM Drik Panchang on 19 Nov 2026 (tests/fixtures/matching-reference-drik.json,
+//                                     "derived_tables_boy_row_girl_col"). They differ from the Jagannatha Hora tables in many cells.
+//                                     Yoni is ordered (boy row, girl column); its two asymmetric cells (Elephant-Buffalo 3 vs 2,
+//                                     Buffalo-Deer 3 vs 2) are kept as Drik shows them. Only one nakshatra per animal was tested,
+//                                     so a gender-specific rule may exist: not known yet.
+//   Bhakoot ......................... 2/12, 5/9 and 6/8 between the two Moon signs score 0, always (Drik gives 0 even when the sign
+//                                     lords are friends). The classical exception is shown as a note only, never as points.
+//   Nadi ............................ same Nadi = 0, EXCEPT 8 when the Moon signs are the same but the nakshatras differ, or the
+//                                     nakshatra is the same but the signs differ (Drik Panchang observations: Krittika-Rohini in
+//                                     Taurus; Chitra in Virgo vs Libra), which is also the classical Nadi-dosha cancellation.
+//                                     Same nakshatra AND same sign: 0, with a note when the padas differ (classical texts treat
+//                                     different padas of one nakshatra as a partial relief; Drik's own result depends on the
+//                                     nakshatra and pada order and is not fully known, so this is the one place we may differ).
+//   Manglik ......................... three levels per person. Mars in house 1, 2, 4, 7, 8 or 12 counts.
+//                                     "manglik": it counts from the Lagna and Mars is not in its own sign (Aries, Scorpio) or exalted (Capricorn).
+//                                     "mild": it counts from the Moon only, OR it counts from the Lagna but Mars is in its own sign / exalted.
+//                                     "none": otherwise. Unknown birth time: only the Moon is checked, so the highest level is "mild".
+//                                     Couple: both "manglik" or both "mild" = balanced; one "manglik" and the other "none" = dosha present;
+//                                     both "none" = no dosha; any other pair = softened.
+// The total is the plain sum (22.5 stays 22.5). Drik shows it rounded down; we do not.
+(function (root) {
+  "use strict";
+  const SIGNS = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
+  const SIGN_LORD = ["Mars", "Venus", "Mercury", "Moon", "Sun", "Mercury", "Venus", "Mars", "Jupiter", "Saturn", "Saturn", "Jupiter"];
+  const NAK = ["Ashwini", "Bharani", "Krittika", "Rohini", "Mrigashira", "Ardra", "Punarvasu", "Pushya", "Ashlesha", "Magha", "Purva Phalguni", "Uttara Phalguni", "Hasta", "Chitra", "Swati", "Vishakha", "Anuradha", "Jyeshtha", "Mula", "Purva Ashadha", "Uttara Ashadha", "Shravana", "Dhanishta", "Shatabhisha", "Purva Bhadrapada", "Uttara Bhadrapada", "Revati"];
+  const KOOTAS = [["varna", "Varna", 1], ["vashya", "Vashya", 2], ["tara", "Tara", 3], ["yoni", "Yoni", 4], ["maitri", "Graha Maitri", 5], ["gana", "Gana", 6], ["bhakoot", "Bhakoot", 7], ["nadi", "Nadi", 8]];
+
+  // ---- Varna: by Moon sign. Rank 4 Brahmin(Vipra) > 3 Kshatriya > 2 Vaishya > 1 Shudra. 1 point if the boy's rank >= the girl's.
+  const VARNA_OF_SIGN = ["Kshatriya", "Vaishya", "Shudra", "Vipra", "Kshatriya", "Vaishya", "Shudra", "Vipra", "Kshatriya", "Vaishya", "Shudra", "Vipra"];
+  const VARNA_RANK = { Shudra: 1, Vaishya: 2, Kshatriya: 3, Vipra: 4 };
+
+  // ---- Vashya: by Moon sign (Sagittarius and Capricorn are split at 15 degrees). Rows = boy, columns = girl, Drik-derived.
+  const VASHYA_GROUPS = ["Chatushpada", "Manava", "Vanachara", "Keeta", "Jalachara"];
+  const VASHYA_TABLE = [
+    [2, 1, 0, 1, 1],  // Chatushpada
+    [1, 2, 0, 1, 0.5],  // Manava
+    [0, 0, 2, 0, 1],  // Vanachara
+    [1, 1, 0, 2, 1],  // Keeta
+    [1, 0.5, 1, 1, 2],  // Jalachara
+  ];
+  function vashyaOf(sign, degInSign) {
+    if (sign === 8) return degInSign < 15 ? "Manava" : "Chatushpada";
+    if (sign === 9) return degInSign < 15 ? "Chatushpada" : "Jalachara";
+    return ["Chatushpada", "Chatushpada", "Manava", "Jalachara", "Vanachara", "Manava", "Manava", "Keeta", null, null, "Manava", "Jalachara"][sign];
+  }
+
+  // ---- Tara: count each nakshatra from the other's, divide by 9; remainders 3, 5, 7 are unfavourable. 3 points if both favourable, 1.5 if one, 0 if neither.
+  const TARA_NAMES = ["Janma", "Sampat", "Vipat", "Kshema", "Pratyak", "Sadhana", "Naidhana", "Mitra", "Parama Mitra"];
+  const tara = (from, to) => { const r = (((to - from + 27) % 27) + 1) % 9; return { count: ((to - from + 27) % 27) + 1, bad: r === 3 || r === 5 || r === 7 }; };
+
+  // ---- Yoni: animal of each nakshatra; rows = boy, columns = girl, Drik-derived (14 x 14).
+  const YONI_ANIMALS = ["Horse", "Elephant", "Sheep", "Serpent", "Dog", "Cat", "Rat", "Cow", "Buffalo", "Tiger", "Deer", "Monkey", "Mongoose", "Lion"];
+  const YONI_OF_NAK = ["Horse", "Elephant", "Sheep", "Serpent", "Serpent", "Dog", "Cat", "Sheep", "Cat", "Rat", "Rat", "Cow", "Buffalo", "Tiger", "Buffalo", "Tiger", "Deer", "Deer", "Dog", "Monkey", "Mongoose", "Monkey", "Lion", "Horse", "Lion", "Cow", "Elephant"];
+  const YONI_TABLE = [
+    [4, 2, 3, 1, 2, 3, 3, 3, 0, 1, 3, 2, 2, 1],  // Horse
+    [2, 4, 2, 2, 2, 3, 2, 2, 3, 1, 2, 2, 2, 0],  // Elephant
+    [3, 2, 4, 1, 2, 3, 2, 3, 3, 1, 3, 0, 3, 1],  // Sheep
+    [1, 2, 1, 4, 1, 1, 1, 1, 2, 2, 1, 1, 0, 2],  // Serpent
+    [2, 2, 2, 1, 4, 1, 1, 1, 2, 1, 0, 2, 1, 1],  // Dog
+    [3, 3, 3, 1, 1, 4, 0, 2, 2, 2, 2, 2, 2, 2],  // Cat
+    [3, 2, 2, 1, 1, 0, 4, 2, 2, 2, 2, 2, 2, 1],  // Rat
+    [3, 2, 3, 1, 1, 2, 2, 4, 3, 0, 2, 2, 2, 1],  // Cow
+    [0, 2, 3, 2, 2, 2, 2, 3, 4, 1, 3, 2, 2, 1],  // Buffalo
+    [1, 1, 1, 2, 1, 2, 2, 0, 1, 4, 1, 1, 2, 2],  // Tiger
+    [3, 2, 3, 1, 0, 2, 2, 2, 2, 1, 4, 2, 2, 1],  // Deer
+    [2, 2, 0, 1, 2, 2, 2, 2, 2, 1, 2, 4, 2, 2],  // Monkey
+    [2, 2, 3, 0, 1, 2, 2, 2, 2, 2, 2, 2, 4, 2],  // Mongoose
+    [1, 0, 1, 2, 1, 2, 1, 1, 1, 2, 1, 2, 2, 4],  // Lion
+  ];
+
+  // ---- Graha Maitri: the two Moon-sign lords. Classical points table (symmetric); the same lord scores 5.
+  const PLANETS = ["Sun", "Moon", "Mars", "Mercury", "Jupiter", "Venus", "Saturn"];
+  const MAITRI_TABLE = [ // Sun Moon Mars Mercury Jupiter Venus Saturn
+    [5, 5, 5, 4, 5, 0, 0],
+    [5, 5, 4, 4, 4, 0.5, 0.5],
+    [5, 4, 5, 0.5, 5, 3, 0.5],
+    [4, 4, 0.5, 5, 0.5, 5, 4],
+    [5, 4, 5, 0.5, 5, 0.5, 3],
+    [0, 0.5, 3, 5, 0.5, 5, 5],
+    [0, 0.5, 0.5, 4, 3, 5, 5],
+  ];
+  const maitriPoints = (a, b) => MAITRI_TABLE[PLANETS.indexOf(a)][PLANETS.indexOf(b)];
+
+  // ---- Gana: by nakshatra; (boy, girl) values as Drik shows them.
+  const GANA_OF_NAK = ["Deva", "Manushya", "Rakshasa", "Manushya", "Deva", "Manushya", "Deva", "Deva", "Rakshasa", "Rakshasa", "Manushya", "Manushya", "Deva", "Rakshasa", "Deva", "Rakshasa", "Deva", "Rakshasa", "Rakshasa", "Manushya", "Manushya", "Deva", "Rakshasa", "Rakshasa", "Manushya", "Manushya", "Deva"];
+  const GANA_TABLE = { Deva: { Deva: 6, Manushya: 6, Rakshasa: 0 }, Manushya: { Deva: 5, Manushya: 6, Rakshasa: 0 }, Rakshasa: { Deva: 1, Manushya: 0, Rakshasa: 6 } };
+
+  // ---- Nadi: by nakshatra.
+  const NADI_OF_NAK = ["Adi", "Madhya", "Antya", "Antya", "Madhya", "Adi", "Adi", "Madhya", "Antya", "Antya", "Madhya", "Adi", "Adi", "Madhya", "Antya", "Antya", "Madhya", "Adi", "Adi", "Madhya", "Antya", "Antya", "Madhya", "Adi", "Adi", "Madhya", "Antya"];
+
+  const SAME_NAK_NOTE = "Same nakshatra and sign: some sites score Bhakoot and Nadi differently for this case.";
+  const moonOf = (k) => { const m = k.grahas.Moon; return { sign: m.sign, signName: SIGNS[m.sign], degInSign: m.degInSign, nakIndex: m.nakshatra.index, nakshatra: NAK[m.nakshatra.index], pada: m.nakshatra.pada }; };
+
+  function kootas(b, g) {
+    const out = {};
+    const put = (key, bv, gv, pts, note) => { const k = KOOTAS.find((x) => x[0] === key); out[key] = Object.assign({ key, name: k[1], boy: bv, girl: gv, points: pts, max: k[2] }, note ? { note } : {}); };
+
+    const bVar = VARNA_OF_SIGN[b.sign], gVar = VARNA_OF_SIGN[g.sign];
+    put("varna", bVar, gVar, VARNA_RANK[bVar] >= VARNA_RANK[gVar] ? 1 : 0);
+
+    const bV = vashyaOf(b.sign, b.degInSign), gV = vashyaOf(g.sign, g.degInSign);
+    put("vashya", bV, gV, VASHYA_TABLE[VASHYA_GROUPS.indexOf(bV)][VASHYA_GROUPS.indexOf(gV)]);
+
+    const t1 = tara(b.nakIndex, g.nakIndex), t2 = tara(g.nakIndex, b.nakIndex);
+    // each person's value is their Tara name: the other's nakshatra counted from their own (Janma, Sampat, Vipat, Kshema, Pratyak, Sadhana, Naidhana, Mitra, Parama Mitra)
+    put("tara", TARA_NAMES[(t1.count - 1) % 9], TARA_NAMES[(t2.count - 1) % 9], t1.bad && t2.bad ? 0 : t1.bad || t2.bad ? 1.5 : 3);
+
+    const bY = YONI_OF_NAK[b.nakIndex], gY = YONI_OF_NAK[g.nakIndex];
+    put("yoni", bY, gY, YONI_TABLE[YONI_ANIMALS.indexOf(bY)][YONI_ANIMALS.indexOf(gY)]);
+
+    const bL = SIGN_LORD[b.sign], gL = SIGN_LORD[g.sign];
+    put("maitri", bL, gL, maitriPoints(bL, gL));
+
+    const bG = GANA_OF_NAK[b.nakIndex], gG = GANA_OF_NAK[g.nakIndex];
+    put("gana", bG, gG, GANA_TABLE[bG][gG]);
+
+    const d = ((g.sign - b.sign + 12) % 12) + 1, bad = [2, 12, 5, 9, 6, 8].indexOf(d) >= 0;
+    const friendly = maitriPoints(bL, gL) === 5; // same lord, or friends
+    put("bhakoot", b.signName, g.signName, bad ? 0 : 7,
+      bad && friendly ? "The Moon-sign lords are friends (or the same planet): the classical texts treat this as an exception to the Bhakoot dosha, but the score stays 0." : null);
+
+    const bN = NADI_OF_NAK[b.nakIndex], gN = NADI_OF_NAK[g.nakIndex], sameNak = b.nakIndex === g.nakIndex, sameSign = b.sign === g.sign;
+    let nPts = bN === gN ? 0 : 8, nNote = null;
+    if (bN === gN) {
+      if (sameSign && !sameNak) { nPts = 8; nNote = "Same Nadi, but the Moon signs are the same and the nakshatras differ: the Nadi dosha does not apply."; }
+      else if (!sameSign && sameNak) { nPts = 8; nNote = "Same Nadi, but the nakshatra is the same and the Moon signs differ: the Nadi dosha does not apply."; }
+      else if (sameSign && sameNak && b.pada !== g.pada) nNote = "Same nakshatra and same sign, different padas (" + b.pada + " and " + g.pada + "): the score stays 0; some traditions allow partial relief.";
+    }
+    put("nadi", bN, gN, nPts, nNote);
+    return out;
+  }
+
+  // ---- Manglik for one person: level "manglik" | "mild" | "none"
+  const MANGLIK_HOUSES = [1, 2, 4, 7, 8, 12];
+  function manglikOf(k) {
+    const mars = k.grahas.Mars, marsSign = mars.sign, moonSign = k.grahas.Moon.sign, lagna = k.ascendant ? k.ascendant.sign : null;
+    const houseFrom = (from) => ((marsSign - from + 12) % 12) + 1;
+    const fromMoon = houseFrom(moonSign), fromLagna = lagna == null ? null : houseFrom(lagna);
+    const mLagna = fromLagna != null && MANGLIK_HOUSES.indexOf(fromLagna) >= 0, mMoon = MANGLIK_HOUSES.indexOf(fromMoon) >= 0;
+    const strong = [0, 7, 9].indexOf(marsSign) >= 0; // own sign (Aries, Scorpio) or exalted (Capricorn)
+    const why = marsSign === 9 ? "exalted in Capricorn" : "in its own sign (" + SIGNS[marsSign] + ")";
+    const reasons = [];
+    if (fromLagna == null) reasons.push("Birth time is not known, so Mars from the Lagna could not be checked; only Mars from the Moon is used, and the highest level possible is mild.");
+    else reasons.push("Mars is in house " + fromLagna + " from the Lagna (" + SIGNS[marsSign] + "), which " + (mLagna ? "counts" : "does not count") + " for Manglik.");
+    reasons.push("Mars is in house " + fromMoon + " from the Moon (" + SIGNS[marsSign] + "), which " + (mMoon ? "counts" : "does not count") + " for Manglik.");
+    let level = "none";
+    if (mLagna && !strong) { level = "manglik"; reasons.push("Mars counts from the Lagna, so this chart is Manglik."); }
+    else if (mLagna && strong) { level = "mild"; reasons.push("Mars counts from the Lagna but is " + why + ", which lowers the dosha to mild."); }
+    else if (mMoon) { level = "mild"; reasons.push("Mars counts from the Moon only, so the dosha is mild."); }
+    else reasons.push("Mars does not count from the " + (fromLagna == null ? "Moon" : "Lagna or the Moon") + ", so there is no Manglik dosha.");
+    return { level, manglik: level === "manglik", fromLagna: fromLagna == null ? null : { house: fromLagna, counts: mLagna }, fromMoon: { house: fromMoon, counts: mMoon },
+      marsSign: SIGNS[marsSign], marsOwnOrExalted: strong, reasons, lagnaSkipped: fromLagna == null };
+  }
+  // Couple rule on the two levels: balanced | present | softened | none
+  function manglikCouple(a, b) {
+    if (a === "none" && b === "none") return { status: "none", note: "Neither of you has Manglik dosha." };
+    if (a === b) return { status: "balanced", note: a === "manglik" ? "Both of you are Manglik, so the dosha is balanced." : "Both of you have a mild Manglik dosha, so it is balanced." };
+    if ((a === "manglik" && b === "none") || (a === "none" && b === "manglik")) return { status: "present", note: "Only one of you is Manglik, so the dosha is present." };
+    return { status: "softened", note: "The Manglik dosha is softened: one of you is " + (a === "manglik" || b === "manglik" ? "Manglik and the other mild." : "mild and the other has none.") };
+  }
+
+  // Bands on the exact total.
+  function band(total) {
+    if (total >= 33) return "Excellent match";
+    if (total >= 25) return "Good match";
+    if (total >= 18) return "Average match";
+    return "Low match";
+  }
+
+  // The main entry: two charts from KundliEngine.computeKundli (boy first, girl second).
+  function matchKundlis(boyKundli, girlKundli) {
+    const b = moonOf(boyKundli), g = moonOf(girlKundli), k = kootas(b, g);
+    const total = KOOTAS.reduce((s, x) => s + k[x[0]].points, 0);
+    const mb = manglikOf(boyKundli), mg = manglikOf(girlKundli), mc = manglikCouple(mb.level, mg.level);
+    const notes = [];
+    if (b.nakIndex === g.nakIndex && b.sign === g.sign) notes.push(SAME_NAK_NOTE);
+    if (mb.lagnaSkipped || mg.lagnaSkipped) notes.push("Birth time is missing for " + (mb.lagnaSkipped && mg.lagnaSkipped ? "both people" : mb.lagnaSkipped ? "the boy" : "the girl") + ": Manglik from the Lagna was skipped, and the Moon's nakshatra and pada are approximate.");
+    const doshas = [
+      { key: "bhakoot", name: "Bhakoot dosha", present: k.bhakoot.points === 0, note: k.bhakoot.note || null },
+      { key: "nadi", name: "Nadi dosha", present: k.nadi.points === 0, note: k.nadi.note || null },
+      { key: "manglik", name: "Manglik dosha", present: mc.status === "present", status: mc.status, note: mc.note },
+    ];
+    return { total, max: 36, band: band(total), kootas: KOOTAS.map((x) => k[x[0]]), boyMoon: b, girlMoon: g, doshas, manglik: { boy: mb, girl: mg, status: mc.status, note: mc.note }, notes };
+  }
+
+  // Convenience: two people as birth data -> result. `deps` = { computeKundli, toUtcDate, toUtcDateTz } from the chart engine.
+  // person = { date: "YYYY-MM-DD", time: "HH:MM" | null, tz: 5.5 (hours) or ianaTz: "Asia/Kolkata", lat, lon }
+  function matchBirths(boy, girl, deps) {
+    const kundli = (p) => {
+      const [y, mo, d] = p.date.split("-").map(Number), known = !!p.time, [h, mi] = known ? p.time.split(":").map(Number) : [12, 0];
+      const local = { year: y, month: mo, day: d, hour: h, minute: mi };
+      const utc = p.ianaTz ? deps.toUtcDateTz(local, p.ianaTz) : deps.toUtcDate(local, p.tz);
+      return deps.computeKundli({ utcMs: utc.getTime(), latDeg: p.lat, lonDeg: p.lon, timeKnown: known, asOfMs: utc.getTime() });
+    };
+    return matchKundlis(kundli(boy), kundli(girl));
+  }
+
+  const api = { matchKundlis, matchBirths, kootas, manglikOf, manglikCouple, band, tables: { YONI_TABLE, YONI_ANIMALS, VASHYA_TABLE, VASHYA_GROUPS, GANA_TABLE } };
+  if (typeof module !== "undefined" && module.exports) module.exports = api; else root.MatchingEngine = api;
+})(typeof globalThis !== "undefined" ? globalThis : this);
 
 </script>
 <script>
@@ -5153,6 +5539,90 @@ const I18N = {
     "nk.ex3": "What will my current dasha bring this year?",
     "nk.ex4": "Which period is best for buying a home?",
     "nk.explore.aria": "Explore Nakshatra",
+    "mt.back.home": "Home",
+    "mt.kicker": "Kundli matching",
+    "mt.h1": "Match two kundlis",
+    "mt.sub": "36-guna Ashtakoota matching and a Manglik check for both, worked out from exact Moon positions. Free.",
+    "mt.boy.h": "Boy's details",
+    "mt.girl.h": "Girl's details",
+    "mt.boy.ph": "e.g. Rahul",
+    "mt.girl.ph": "e.g. Asha",
+    "mt.boy.default": "Boy",
+    "mt.girl.default": "Girl",
+    "mt.mine": "Use my details",
+    "mt.mine.on": "My details",
+    "mt.name": "Name",
+    "mt.optional": "(optional)",
+    "mt.notime": "Don't know the exact time",
+    "mt.place": "Place of birth",
+    "mt.go": "Match kundlis",
+    "mt.fine": "Matching uses each person's Moon nakshatra, so an exact birth time gives the most reliable result. Nothing is shared without your permission.",
+    "mt.err.calc": "We could not work out this match. Check both sets of birth details and try again.",
+    "mt.edit": "Edit details",
+    "mt.result.h": "Kundli matching result",
+    "mt.table.h": "Guna milan",
+    "mt.table.sub": "8 kootas · 36 points",
+    "mt.col.koota": "Koota",
+    "mt.col.points": "Points",
+    "mt.doshas.h": "Doshas",
+    "mt.ring.of": "of 36 gunas",
+    "mt.ring.aria": "{n} of 36 gunas",
+    "mt.band.low": "Low match",
+    "mt.band.avg": "Average match",
+    "mt.band.good": "Good match",
+    "mt.band.excellent": "Excellent match",
+    "mt.k.varna": "Values and work",
+    "mt.k.vashya": "Mutual attraction",
+    "mt.k.tara": "Wellbeing and luck",
+    "mt.k.yoni": "Physical bond",
+    "mt.k.maitri": "Friendship",
+    "mt.k.gana": "Temperament",
+    "mt.k.bhakoot": "Family and money",
+    "mt.k.nadi": "Health and children",
+    "mt.dosha.bhakoot": "Bhakoot dosha",
+    "mt.dosha.nadi": "Nadi dosha",
+    "mt.dosha.manglik": "Manglik",
+    "mt.badge.present": "Present",
+    "mt.badge.exception": "Exception applies",
+    "mt.badge.not": "Not present",
+    "mt.badge.softened": "Softened",
+    "mt.badge.balanced": "Balanced",
+    "mt.lvl.manglik": "Manglik.",
+    "mt.lvl.mild": "Mild Manglik.",
+    "mt.lvl.none": "Not Manglik.",
+    "mt.mg.houses": "Mars is in the {l} from the Lagna and the {m} from the Moon.",
+    "mt.mg.moonhouse": "Mars is in the {m} from the Moon.",
+    "mt.bh.pos": "Their Moon signs are {a} and {b} from each other,",
+    "mt.bh.ok": "which is a good placement, so Bhakoot scores the full 7.",
+    "mt.bh.zero": "so Bhakoot scores 0.",
+    "mt.bh.exc": "The sign lords, {a} and {b}, are friends or the same planet, which many astrologers treat as cancelling this dosha.",
+    "mt.nadi.same": "Both of you are {n} Nadi. The same Nadi scores 0.",
+    "mt.nadi.diff": "{b} is {bn} Nadi and {g} is {gn} Nadi. Different Nadis get the full 8 points.",
+    "mt.s.full": "Full marks on {list}.",
+    "mt.s.and": "and",
+    "mt.s.nofull": "No koota scores full marks.",
+    "mt.s.yoni": "physical bond",
+    "mt.s.maitri": "friendship",
+    "mt.s.gana": "temperament",
+    "mt.s.bhakoot": "family and money",
+    "mt.s.nadi": "health",
+    "mt.s.bh.pres": "is present.",
+    "mt.s.bh.exc": "is present, but an exception applies.",
+    "mt.s.nadi.pres": "is present.",
+    "mt.s.mg.present": "{who} is Manglik; the Manglik dosha is present.",
+    "mt.s.mg.softened": "The Manglik dosha is softened.",
+    "mt.s.mg.balanced": "The Manglik dosha is balanced.",
+    "mt.share": "Share result",
+    "mt.report": "Get the detailed report",
+    "mt.soon": "Detailed report is coming soon",
+    "mt.disclaimer": "Scores follow the classical Ashtakoota tables. A guna score is one part of compatibility, not a promise. For important decisions, also look at both full charts.",
+    "mt.share.h": "Your result card",
+    "mt.share.fine": "The card shows names, score and the eight koota points. No birth details.",
+    "mt.share.send": "Share",
+    "mt.share.save": "Save image",
+    "mt.share.footer": "Check your match free at nakshatra.ind.in",
+    "mt.share.close": "Close",
+    "mt.share.alt": "Result card: {n} of 36 gunas, {band}",
     "nk.card.palm": "Palm reading",
     "nk.card.palm.d": "Photo stays on your phone",
     "nk.card.reports": "Reports",
@@ -5162,7 +5632,7 @@ const I18N = {
     "nk.card.kundli": "Free kundli",
     "nk.card.kundli.d": "Your full birth chart",
     "nk.card.match": "Kundli matching",
-    "nk.card.match.d": "36-point guna match, coming soon",
+    "nk.card.match.d": "36-guna match for two charts",
     "nk.card.pricing": "Pricing",
     "nk.card.pricing.d": "Plans for your full report",
     "nk.trust1": "Real planet positions",
@@ -6465,10 +6935,10 @@ async function bootstrapSession() {
   };
   await loadUserDataFromBackend();
   if (LG.open && LG.step < 3) closeLogin({ noFocus: true });
-  showScreen("screen-dashboard");
+  showScreen(WANT_MATCH ? "screen-match" : "screen-dashboard");
   renderDashboard();
-  // someone signed in (for example just back from Google) who has no birth details yet: ask for them
-  if (!(state.birth.year && state.birth.city)) openLogin({ step: 3 });
+  // someone signed in (for example just back from Google) who has no birth details yet: ask for them (not when they came for the free matching, which needs no account)
+  if (!WANT_MATCH && !(state.birth.year && state.birth.city)) openLogin({ step: 3 });
 }
 
 // Turns a Supabase auth error into a message a non-technical user can act on.
@@ -6548,6 +7018,7 @@ function applyLanguage(lang) {
   const activeId = activeEl && activeEl.id;
   if (activeId === "screen-dashboard") renderDashboard();
   if (LG.open) { lgRenderText(); lgFillSelects(); lgPrepBirth(); }
+  if (typeof mtLang === "function") mtLang();
   if (activeId === "screen-yearahead" && state.computed.sunIdx != null) renderYearAheadScreen();
   if (activeId === "screen-fullreport") renderFullReport();
   if (activeId === "screen-report") renderTierSelection();
@@ -6642,6 +7113,7 @@ function showScreen(id, opts) {
   if (id === "screen-report") renderTierSelection();
   if (id === "screen-checkout") renderCheckout();
   if (id === "screen-kundli") renderKundli();
+  if (id === "screen-match") mtOpenScreen();
   if (id === "screen-dashboard") renderDashboard();
   if (id === "screen-fullreport") renderFullReport();
   if (id === "screen-compat") renderCompatScreen();
@@ -6664,7 +7136,7 @@ const KD_ORDER = ["Sun", "Moon", "Mars", "Mercury", "Jupiter", "Venus", "Saturn"
 const KD_HOUSES = [[150, 52, 150, 100, 3], [75, 20, 75, 44, 2], [28, 72, 28, 96, 2], [72, 146, 72, 170, 3], [28, 222, 28, 246, 2], [75, 268, 75, 290, 2],
   [150, 222, 150, 266, 3], [225, 268, 225, 290, 2], [270, 222, 270, 246, 2], [225, 146, 225, 170, 3], [270, 72, 270, 96, 2], [225, 20, 225, 44, 2]];
 let kdToken = 0;
-const WIDE_SCREENS = ["screen-dashboard", "screen-kundli"];
+const WIDE_SCREENS = ["screen-dashboard", "screen-kundli", "screen-match"];
 
 function kdEsc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
 function kdMonthYear(iso) { return new Date(iso).toLocaleDateString("en-GB", { month: "short", year: "numeric", timeZone: "UTC" }); }
@@ -7277,6 +7749,343 @@ function initLogin() {
   if (authIntent === "login" || authIntent === "signup") openLogin({ mode: authIntent });
 }
 
+// ================= KUNDLI MATCHING =================
+// Two people in, one result out. The astronomy is the free kundli's engine (KundliEngine.computeKundli); the scoring is MatchingEngine (matching.js).
+// Nothing is saved and nothing leaves the phone: no network call, no database write.
+// kundli-matching.html's button links here with ?go=match: open the free matching screen (no account needed)
+const WANT_MATCH = new URLSearchParams(location.search).get("go") === "match";
+const MT = { city: { b: null, g: null }, shown: { b: [], g: [] }, active: { b: -1, g: -1 }, mine: null, result: null, raw: null, opener: null };
+const MT_KOOTA_SUB = { varna: "mt.k.varna", vashya: "mt.k.vashya", tara: "mt.k.tara", yoni: "mt.k.yoni", maitri: "mt.k.maitri", gana: "mt.k.gana", bhakoot: "mt.k.bhakoot", nadi: "mt.k.nadi" };
+const mtEl = (id) => document.getElementById(id);
+const mtOrd = (n) => n + (n % 100 >= 11 && n % 100 <= 13 ? "th" : { 1: "st", 2: "nd", 3: "rd" }[n % 10] || "th");
+
+function mtSideHtml(k) {
+  const boy = k === "b", p = "mt-" + k + "-";
+  return '<div class="mt-ph"><span class="mt-pi" aria-hidden="true">' + (boy ? "♂" : "♀") + '</span><h2 id="' + p + 'title" data-i18n="' + (boy ? "mt.boy.h" : "mt.girl.h") + '"></h2>' +
+    '<button type="button" class="mt-mine" id="' + p + 'mine" aria-pressed="false" data-i18n="mt.mine"></button></div>' +
+    '<label class="lg-fl" for="' + p + 'name"><span data-i18n="mt.name"></span> <small data-i18n="mt.optional"></small></label>' +
+    '<input class="lg-fi" id="' + p + 'name" type="text" maxlength="40" autocomplete="off" data-i18n-ph="' + (boy ? "mt.boy.ph" : "mt.girl.ph") + '">' +
+    '<fieldset class="lg-set"><legend class="lg-fl" data-i18n="nk.lg.dob"></legend><div class="lg-row3">' +
+    ["d:day", "m:month", "y:year"].map((x) => { const [i, t] = x.split(":"); return '<label class="nk-vh" for="' + p + i + '" data-i18n="nk.lg.' + t + '"></label><select id="' + p + i + '"></select>'; }).join("") + "</div></fieldset>" +
+    '<fieldset class="lg-set"><legend class="lg-fl" data-i18n="nk.lg.tob"></legend><div class="lg-row3">' +
+    '<label class="nk-vh" for="' + p + 'h" data-i18n="nk.lg.hour"></label><select id="' + p + 'h"></select>' +
+    '<label class="nk-vh" for="' + p + 'mi" data-i18n="nk.lg.minute"></label><select id="' + p + 'mi"></select>' +
+    '<label class="nk-vh" for="' + p + 'ap" data-i18n="nk.lg.ampm"></label><select id="' + p + 'ap"><option value="AM">AM</option><option value="PM">PM</option></select></div></fieldset>' +
+    '<label class="lg-chk"><input type="checkbox" id="' + p + 'notime"><span data-i18n="mt.notime"></span></label>' +
+    '<label class="lg-fl" for="' + p + 'place" data-i18n="mt.place"></label>' +
+    '<div class="lg-combo"><input class="lg-fi" id="' + p + 'place" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="' + p + 'plist" aria-describedby="' + p + 'err" autocomplete="off" data-i18n-ph="nk.lg.place.ph">' +
+    '<span class="mt-latlon" id="' + p + 'll" hidden></span><ul class="lg-plist" id="' + p + 'plist" role="listbox" data-i18n-aria="nk.lg.place.list" hidden></ul></div>' +
+    '<p class="lg-err" id="' + p + 'err" role="alert"></p>';
+}
+function mtFillSelects(k) {
+  const p = "mt-" + k + "-", opt = (v, t) => '<option value="' + v + '">' + t + "</option>";
+  const range = (a, b, pad) => { const o = []; for (let i = a; i <= b; i++) o.push(opt(i, pad ? String(i).padStart(2, "0") : i)); return o.join(""); };
+  mtEl(p + "d").innerHTML = opt("", tr("nk.lg.day")) + range(1, 31);
+  mtEl(p + "m").innerHTML = opt("", tr("nk.lg.month")) + LG_MONTHS.map((m, i) => opt(i + 1, m)).join("");
+  const ys = [opt("", tr("nk.lg.year"))]; for (let i = new Date().getFullYear(); i >= 1900; i--) ys.push(opt(i, i));
+  mtEl(p + "y").innerHTML = ys.join("");
+  mtEl(p + "h").innerHTML = opt("", tr("nk.lg.hour")) + range(1, 12);
+  mtEl(p + "mi").innerHTML = opt("", tr("nk.lg.minute")) + range(0, 59, true);
+}
+function mtClosePlaces(k) {
+  const l = mtEl("mt-" + k + "-plist"), i = mtEl("mt-" + k + "-place");
+  l.hidden = true; l.innerHTML = ""; MT.shown[k] = []; MT.active[k] = -1;
+  i.setAttribute("aria-expanded", "false"); i.removeAttribute("aria-activedescendant");
+}
+function mtSetCity(k, c) {
+  MT.city[k] = c;
+  const ll = mtEl("mt-" + k + "-ll");
+  if (c && Number.isFinite(c.lat)) { ll.textContent = Math.abs(c.lat).toFixed(2) + "°" + (c.lat >= 0 ? "N" : "S") + ", " + Math.abs(c.lon).toFixed(2) + "°" + (c.lon >= 0 ? "E" : "W"); ll.hidden = false; } else ll.hidden = true;
+}
+function mtRenderPlaces(k) {
+  const input = mtEl("mt-" + k + "-place"), list = mtEl("mt-" + k + "-plist"), err = mtEl("mt-" + k + "-err");
+  if (!input.value.trim()) { mtClosePlaces(k); return; }
+  MT.shown[k] = lgPlaces(input.value);
+  if (!MT.shown[k].length) { mtClosePlaces(k); err.textContent = tr("nk.lg.place.none"); return; }
+  err.textContent = "";
+  list.innerHTML = MT.shown[k].map((c, i) => '<li role="option" id="mt-' + k + '-opt-' + i + '" data-i="' + i + '" aria-selected="false"><span>' + kdEsc(c.name) + "</span><small>" + kdEsc(cityMeta(c)) + "</small></li>").join("");
+  list.hidden = false; MT.active[k] = -1;
+  input.setAttribute("aria-expanded", "true"); input.removeAttribute("aria-activedescendant");
+}
+function mtMoveOpt(k, d) {
+  const n = MT.shown[k].length; if (!n) return;
+  MT.active[k] = (MT.active[k] + d + n) % n;
+  $all("#mt-" + k + "-plist li").forEach((li, i) => li.setAttribute("aria-selected", i === MT.active[k] ? "true" : "false"));
+  const li = mtEl("mt-" + k + "-opt-" + MT.active[k]);
+  mtEl("mt-" + k + "-place").setAttribute("aria-activedescendant", "mt-" + k + "-opt-" + MT.active[k]);
+  if (li && li.scrollIntoView) li.scrollIntoView({ block: "nearest" });
+}
+function mtPick(k, c) { mtSetCity(k, c); mtEl("mt-" + k + "-place").value = cityLabel(c); mtClosePlaces(k); mtEl("mt-" + k + "-err").textContent = ""; }
+
+function mtSyncNoTime(k) {
+  const unk = mtEl("mt-" + k + "-notime").checked;
+  ["h", "mi", "ap"].forEach((x) => { mtEl("mt-" + k + "-" + x).disabled = unk; });
+}
+function mtClearSide(k) {
+  const p = "mt-" + k + "-";
+  ["name", "d", "m", "y", "h", "mi", "place"].forEach((x) => { mtEl(p + x).value = ""; });
+  mtEl(p + "ap").value = "AM"; mtEl(p + "notime").checked = false; mtSyncNoTime(k); mtSetCity(k, null); mtClosePlaces(k); mtEl(p + "err").textContent = "";
+}
+// "Use my details": the signed-in person's own saved birth details, on one side. Pressing it again empties that side.
+function mtUseMine(k) {
+  const other = k === "b" ? "g" : "b", p = "mt-" + k + "-";
+  if (MT.mine === k) { mtClearSide(k); MT.mine = null; mtMineButtons(); return; }
+  if (!state.user) { MT.opener = mtEl(p + "mine"); openLogin({ mode: "login", afterLogin: "screen-match" }); return; }
+  const b = state.birth;
+  if (!(b && b.year && b.city)) { MT.opener = mtEl(p + "mine"); openLogin({ step: 3, afterLogin: "screen-match" }); return; }
+  if (MT.mine === other) MT.mine = null;
+  mtClearSide(k);
+  mtEl(p + "name").value = state.user.name && state.user.name !== String(state.user.email || "").split("@")[0] ? state.user.name : "";
+  mtEl(p + "d").value = b.day; mtEl(p + "m").value = b.month; mtEl(p + "y").value = b.year;
+  mtEl(p + "notime").checked = !!b.unknownTime; mtSyncNoTime(k);
+  if (!b.unknownTime) { mtEl(p + "h").value = b.hour % 12 || 12; mtEl(p + "mi").value = b.minute; mtEl(p + "ap").value = b.hour >= 12 ? "PM" : "AM"; }
+  mtPick(k, b.city);
+  MT.mine = k; mtMineButtons();
+}
+function mtMineButtons() {
+  ["b", "g"].forEach((k) => {
+    const on = MT.mine === k, btn = mtEl("mt-" + k + "-mine");
+    btn.setAttribute("aria-pressed", String(on));
+    btn.textContent = (on ? "✓ " : "") + tr(on ? "mt.mine.on" : "mt.mine");
+  });
+}
+
+// One side's answers -> { ok } or { err, field }
+function mtRead(k) {
+  const p = "mt-" + k + "-", v = (x) => mtEl(p + x).value, num = (x) => Number(v(x));
+  const fail = (key, field) => ({ err: tr(key), field: p + field });
+  if (!v("d") || !v("m") || !v("y")) return fail("nk.lg.err.date", "d");
+  const day = num("d"), month = num("m"), year = num("y"), dt = new Date(Date.UTC(year, month - 1, day));
+  if (dt.getUTCFullYear() !== year || dt.getUTCMonth() !== month - 1 || dt.getUTCDate() !== day) return fail("nk.lg.err.date.real", "d");
+  if (dt.getTime() > Date.now()) return fail("nk.lg.err.date.future", "d");
+  const unknown = mtEl(p + "notime").checked;
+  let hour = 12, minute = 0;
+  if (!unknown) {
+    if (!v("h") || !v("mi")) return fail("nk.lg.err.time", "h");
+    hour = (num("h") % 12) + (v("ap") === "PM" ? 12 : 0); minute = num("mi");
+  }
+  if (!MT.city[k]) {
+    const q = v("place").trim().toLowerCase(), exact = q ? CITIES.filter((c) => cityLabel(c).toLowerCase() === q || c.name.toLowerCase() === q) : [];
+    if (exact.length === 1) mtPick(k, exact[0]);
+  }
+  if (!MT.city[k]) return fail("nk.lg.err.place", "place");
+  return { ok: true, name: v("name").trim(), year, month, day, hour, minute, unknown, city: MT.city[k] };
+}
+function mtChart(d) {
+  const utc = birthLocalToUtc(d.city, { year: d.year, month: d.month, day: d.day, hour: d.hour, minute: d.minute });
+  return KundliEngine.computeKundli({ utcMs: utc.getTime(), latDeg: d.city.lat, lonDeg: d.city.lon, timeKnown: !d.unknown, asOfMs: utc.getTime() });
+}
+
+const mtNames = () => ({ b: (MT.raw && MT.raw.b) || tr("mt.boy.default"), g: (MT.raw && MT.raw.g) || tr("mt.girl.default") });
+function mtBandClass(total) { return total >= 33 ? "excellent" : total >= 25 ? "good" : total >= 18 ? "avg" : "low"; }
+function mtBandText(r) { return tr("mt.band." + mtBandClass(r.total)); }
+const mtNum = (n) => String(Math.round(n * 10) / 10);
+function mtDoshaBadges(r) {
+  const k = (key) => r.kootas.find((x) => x.key === key);
+  const bh = k("bhakoot"), nd = k("nadi");
+  return {
+    bhakoot: bh.points > 0 ? ["ok", "mt.badge.not"] : bh.note ? ["warn", "mt.badge.exception"] : ["bad", "mt.badge.present"],
+    nadi: nd.points > 0 ? ["ok", "mt.badge.not"] : ["bad", "mt.badge.present"],
+    manglik: { present: ["bad", "mt.badge.present"], softened: ["warn", "mt.badge.softened"], balanced: ["ok", "mt.badge.balanced"], none: ["ok", "mt.badge.not"] }[r.manglik.status],
+  };
+}
+function mtSummary(r, names) {
+  const word = { yoni: "mt.s.yoni", maitri: "mt.s.maitri", gana: "mt.s.gana", bhakoot: "mt.s.bhakoot", nadi: "mt.s.nadi" };
+  const parts = [];
+  const strong = r.kootas.filter((x) => x.points === x.max).sort((a, b) => b.max - a.max).slice(0, 3).filter((x) => word[x.key]);
+  if (strong.length) { const t = strong.map((x) => tr(word[x.key])); parts.push(tr("mt.s.full", { list: t.length > 1 ? t.slice(0, -1).join(", ") + " " + tr("mt.s.and") + " " + t[t.length - 1] : t[0] })); }
+  else parts.push(tr("mt.s.nofull"));
+  const bd = mtDoshaBadges(r);
+  if (bd.bhakoot[1] !== "mt.badge.not") parts.push("<b>" + tr("mt.dosha.bhakoot") + "</b> " + tr(bd.bhakoot[1] === "mt.badge.exception" ? "mt.s.bh.exc" : "mt.s.bh.pres"));
+  if (bd.nadi[1] !== "mt.badge.not") parts.push("<b>" + tr("mt.dosha.nadi") + "</b> " + tr("mt.s.nadi.pres"));
+  const bl = r.manglik.boy.level, gl = r.manglik.girl.level, st = r.manglik.status;
+  if (st === "present") parts.push(tr("mt.s.mg.present", { who: "<b>" + kdEsc(bl === "manglik" ? names.b : names.g) + "</b>" }));
+  else if (st === "softened") parts.push(tr("mt.s.mg.softened"));
+  else if (st === "balanced") parts.push(tr("mt.s.mg.balanced"));
+  return parts.join(" ");
+}
+function mtDoshaCards(r, names) {
+  const k = (key) => r.kootas.find((x) => x.key === key), bd = mtDoshaBadges(r), e = kdEsc;
+  const bh = k("bhakoot"), nd = k("nadi"), mt = k("maitri");
+  const sb = r.boyMoon.sign, sg = r.girlMoon.sign, d1 = ((sg - sb + 12) % 12) + 1, d2 = ((sb - sg + 12) % 12) + 1;
+  let bhText = tr("mt.bh.pos", { a: mtOrd(d1), b: mtOrd(d2) }) + " " + (bh.points > 0 ? tr("mt.bh.ok") : tr("mt.bh.zero"));
+  if (bh.note) bhText += " " + tr("mt.bh.exc", { a: mt.boy, b: mt.girl });
+  let ndText = nd.boy === nd.girl ? tr("mt.nadi.same", { n: nd.boy }) : tr("mt.nadi.diff", { b: e(names.b), bn: nd.boy, g: e(names.g), gn: nd.girl });
+  if (nd.note) ndText += " " + e(nd.note);
+  const person = (name, m) => {
+    const houses = m.fromLagna ? tr("mt.mg.houses", { l: mtOrd(m.fromLagna.house), m: mtOrd(m.fromMoon.house) }) : tr("mt.mg.moonhouse", { m: mtOrd(m.fromMoon.house) });
+    // "none": one short sentence. Otherwise the level, where Mars is, and the reason for the level.
+    const why = m.level === "none" ? "" : (m.lagnaSkipped ? " " + e(m.reasons[0]) : "") + " " + e(m.reasons[m.reasons.length - 1]);
+    return '<span class="mt-mg"><b>' + e(name) + ":</b> " + tr("mt.lvl." + m.level) + " " + e(houses) + why + "</span>";
+  };
+  const card = (badge, title, html) => '<article class="mt-dc"><span class="mt-ds ' + (badge[0] === "ok" ? "" : badge[0]) + '">' + tr(badge[1]) + "</span><h3>" + tr(title) + "</h3><p>" + html + "</p></article>";
+  return card(bd.bhakoot, "mt.dosha.bhakoot", e(bhText)) + card(bd.nadi, "mt.dosha.nadi", ndText) +
+    card(bd.manglik, "mt.dosha.manglik", person(names.b, r.manglik.boy) + person(names.g, r.manglik.girl) + '<span class="mt-mg">' + e(r.manglik.note) + "</span>");
+}
+function mtRender(r, names) {
+  const e = kdEsc, ini = (n) => e((n.trim()[0] || "?").toUpperCase());
+  mtEl("mt-hero").innerHTML =
+    '<div class="mt-who"><span class="mt-bub boy" aria-hidden="true">' + ini(names.b) + "</span><div><b>" + e(names.b) + "</b><small>" + e(signName(r.boyMoon.sign)) + " · " + e(r.boyMoon.nakshatra) + "</small></div></div>" +
+    '<div class="mt-ring" style="--p:' + (r.total / 36 * 100).toFixed(2) + '" role="img" aria-label="' + e(tr("mt.ring.aria", { n: mtNum(r.total) })) + '"><div><span><b>' + mtNum(r.total) + "</b><small>" + tr("mt.ring.of") + "</small></span></div></div>" +
+    '<div class="mt-who r"><div><b>' + e(names.g) + "</b><small>" + e(signName(r.girlMoon.sign)) + " · " + e(r.girlMoon.nakshatra) + '</small></div><span class="mt-bub girl" aria-hidden="true">' + ini(names.g) + "</span></div>";
+  const band = mtEl("mt-band"); band.textContent = mtBandText(r); band.className = "mt-vtag " + mtBandClass(r.total);
+  mtEl("mt-summary").innerHTML = mtSummary(r, names);
+  mtEl("mt-col-b").textContent = names.b; mtEl("mt-col-g").textContent = names.g;
+  mtEl("mt-rows").innerHTML = r.kootas.map((x) => {
+    const bad = (x.key === "bhakoot" || x.key === "nadi") && x.points === 0;
+    return '<div class="mt-kr' + (bad ? " bad" : "") + '" role="row"><span role="cell"><b>' + e(x.name) + "</b><small>" + tr(MT_KOOTA_SUB[x.key]) + "</small></span>" +
+      '<span role="cell">' + e(x.boy) + '</span><span role="cell">' + e(x.girl) + '</span><span role="cell" class="mt-pt' + (x.points === x.max ? " full" : "") + '"><i style="--w:' + (x.points / x.max * 100) + '%" aria-hidden="true"></i><em>' + mtNum(x.points) + " / " + x.max + "</em></span></div>";
+  }).join("");
+  mtEl("mt-doshas").innerHTML = mtDoshaCards(r, names);
+  const notes = r.notes.slice();
+  mtEl("mt-notes").innerHTML = notes.map((n) => "<li>" + e(n) + "</li>").join("");
+}
+// The lines on the share card: names, score, band and the eight koota points. Never a birth date, time or place.
+function mtShareLines(r, names) {
+  return { names: names.b + " & " + names.g, score: mtNum(r.total), of: tr("mt.ring.of"), band: mtBandText(r), points: r.kootas.map((x) => x.name + " " + mtNum(x.points) + "/" + x.max), footer: tr("mt.share.footer") };
+}
+async function mtShareCanvas(r, names) {
+  const L = mtShareLines(r, names), c = document.createElement("canvas"); c.width = 1080; c.height = 1080;
+  const x = c.getContext("2d");
+  try { await Promise.all(["600 40px Cinzel", "600 30px Poppins", "400 30px Poppins"].map((f) => document.fonts.load(f))); } catch (_) {}
+  const g = x.createRadialGradient(540, 0, 0, 540, 0, 1100); g.addColorStop(0, "#fdeef5"); g.addColorStop(0.55, "#ffffff"); g.addColorStop(1, "#fff8ec");
+  x.fillStyle = g; x.fillRect(0, 0, 1080, 1080);
+  x.textAlign = "center"; x.textBaseline = "alphabetic";
+  x.fillStyle = "#a14a00"; x.font = "600 30px Cinzel, Georgia, serif"; x.fillText("NAKSHATRA", 540, 96);
+  x.fillStyle = "#be185d"; x.font = "600 22px Poppins, system-ui, sans-serif"; x.fillText(tr("mt.kicker").toUpperCase().split("").join(" "), 540, 152);
+  x.fillStyle = "#3a1420"; let size = 64; x.font = "600 " + size + "px Cinzel, Georgia, serif";
+  while (x.measureText(L.names).width > 940 && size > 30) { size -= 2; x.font = "600 " + size + "px Cinzel, Georgia, serif"; }
+  x.fillText(L.names, 540, 236);
+  const cx = 540, cy = 470, R = 150;
+  x.lineWidth = 34; x.strokeStyle = "#f3e6d3"; x.beginPath(); x.arc(cx, cy, R, 0, Math.PI * 2); x.stroke();
+  x.strokeStyle = "#f6a028"; x.lineCap = "round"; x.beginPath(); x.arc(cx, cy, R, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * Math.min(1, r.total / 36)); x.stroke();
+  x.fillStyle = "#3a1420"; x.font = "600 96px Poppins, system-ui, sans-serif"; x.fillText(L.score, cx, cy + 22);
+  x.fillStyle = "#6e5459"; x.font = "400 26px Poppins, system-ui, sans-serif"; x.fillText(L.of, cx, cy + 66);
+  const bw = 300, bh = 52; x.fillStyle = "#fff4e0"; x.beginPath(); x.roundRect ? x.roundRect(cx - bw / 2, 676, bw, bh, 26) : x.rect(cx - bw / 2, 676, bw, bh); x.fill();
+  x.fillStyle = "#92400e"; x.font = "600 24px Poppins, system-ui, sans-serif"; x.fillText(L.band.toUpperCase(), cx, 711);
+  x.font = "600 28px Poppins, system-ui, sans-serif"; x.textAlign = "left";
+  L.points.forEach((t, i) => {
+    const col = i % 2, row = Math.floor(i / 2), px = 150 + col * 420, py = 800 + row * 52, name = t.slice(0, t.lastIndexOf(" ")), pts = t.slice(t.lastIndexOf(" ") + 1);
+    x.fillStyle = "#5c4148"; x.font = "400 28px Poppins, system-ui, sans-serif"; x.textAlign = "left"; x.fillText(name, px, py);
+    x.fillStyle = "#3a1420"; x.font = "600 28px Poppins, system-ui, sans-serif"; x.textAlign = "right"; x.fillText(pts, px + 330, py);
+  });
+  x.textAlign = "center"; x.fillStyle = "#6e5459"; x.font = "400 24px Poppins, system-ui, sans-serif"; x.fillText(L.footer, 540, 1040);
+  return c;
+}
+let mtShareFile = null;
+async function mtOpenShare() {
+  const r = MT.result; if (!r) return;
+  const names = mtNames();
+  MT.opener = mtEl("mt-share-btn");
+  const canvas = await mtShareCanvas(r, names);
+  const url = canvas.toDataURL("image/png");
+  mtEl("mt-share-img").src = url; mtEl("mt-share-img").alt = tr("mt.share.alt", { n: mtNum(r.total), band: mtBandText(r) });
+  mtEl("mt-share-dl").href = url;
+  mtShareFile = null;
+  await new Promise((res) => canvas.toBlob((b) => { if (b) mtShareFile = new File([b], "kundli-matching.png", { type: "image/png" }); res(); }, "image/png"));
+  mtEl("mt-share-do").hidden = !(navigator.canShare && mtShareFile && navigator.canShare({ files: [mtShareFile] }));
+  mtEl("mt-share").hidden = false; document.body.style.overflow = "hidden";
+  const bg = mtEl("mt-share"); [...document.body.children].forEach((el) => { if (el !== bg && el.tagName !== "SCRIPT") el.inert = true; });
+  mtEl("mt-share-close").focus();
+}
+function mtCloseShare() {
+  mtEl("mt-share").hidden = true; document.body.style.overflow = "";
+  [...document.body.children].forEach((el) => { el.inert = false; });
+  if (MT.opener) MT.opener.focus();
+}
+
+function mtShowResult(show) {
+  mtEl("mt-formview").hidden = show; mtEl("mt-resultview").hidden = !show;
+  window.scrollTo(0, 0);
+  if (show) mtEl("mt-rtitle").focus({ preventScroll: true });
+}
+function mtSubmit() {
+  mtEl("mt-err").textContent = "";
+  const a = mtRead("b"), b = mtRead("g");
+  mtEl("mt-b-err").textContent = a.ok ? "" : a.err; mtEl("mt-g-err").textContent = b.ok ? "" : b.err;
+  const bad = !a.ok ? a : !b.ok ? b : null;
+  if (bad) { mtEl(bad.field).focus(); return; }
+  let r;
+  try { r = MatchingEngine.matchKundlis(mtChart(a), mtChart(b)); } catch (e) { mtEl("mt-err").textContent = tr("mt.err.calc"); return; }
+  MT.result = r; MT.raw = { b: a.name, g: b.name };
+  mtRender(r, mtNames());
+  mtEl("mt-soon").hidden = true; mtEl("mt-report-btn").setAttribute("aria-expanded", "false");
+  mtShowResult(true);
+}
+function mtOpenScreen() {
+  // (re)built on each visit only the first time; answers are kept while the person moves between screens
+  mtShowResult(false);
+  MT.mine = MT.mine && state.user ? MT.mine : null; mtMineButtons();
+}
+// the language changed: relabel the selects (keeping what was chosen), the "Use my details" buttons and an open result
+function mtLang() {
+  if (!mtEl("mt-b-d")) return; // the screen is built a little later at start-up
+  ["b", "g"].forEach((k) => {
+    const ids = ["d", "m", "y", "h", "mi"].map((x) => "mt-" + k + "-" + x), keep = ids.map((id) => mtEl(id).value);
+    mtFillSelects(k); ids.forEach((id, i) => { mtEl(id).value = keep[i]; });
+  });
+  mtMineButtons();
+  if (MT.result) mtRender(MT.result, mtNames());
+}
+// Logging out (or deleting the account): empty both sides and the result.
+function mtResetAll() {
+  if (!mtEl("mt-side-b") || !mtEl("mt-b-name")) return;
+  ["b", "g"].forEach(mtClearSide); MT.mine = null; MT.result = null; MT.raw = null; mtMineButtons();
+  mtEl("mt-resultview").hidden = true; mtEl("mt-formview").hidden = false; mtEl("mt-share").hidden = true; mtEl("mt-share-img").removeAttribute("src");
+  document.body.style.overflow = ""; [...document.body.children].forEach((el) => { el.inert = false; });
+}
+// A small read-only handle for the tests (the app lives inside one function, so they cannot reach these otherwise).
+window.__matchUI = { bandText: (total) => mtBandText({ total }), badges: (r) => { const b = mtDoshaBadges(r); return [tr(b.bhakoot[1]), tr(b.nadi[1]), tr(b.manglik[1])].join("/"); }, shareLines: () => mtShareLines(MT.result, mtNames()) };
+function initMatch() {
+  document.body.appendChild(mtEl("mt-share")); // the card sheet sits at the top level so everything else can be made inert behind it
+  ["b", "g"].forEach((k) => {
+    const side = mtEl("mt-side-" + k);
+    side.innerHTML = mtSideHtml(k);
+    // applyLanguage() already ran before this screen was built, so label the new pieces now
+    side.querySelectorAll("[data-i18n]").forEach((el) => { el.textContent = tr(el.getAttribute("data-i18n")); });
+    side.querySelectorAll("[data-i18n-ph]").forEach((el) => { el.setAttribute("placeholder", tr(el.getAttribute("data-i18n-ph"))); });
+    side.querySelectorAll("[data-i18n-aria]").forEach((el) => { el.setAttribute("aria-label", tr(el.getAttribute("data-i18n-aria"))); });
+    mtFillSelects(k);
+    const place = mtEl("mt-" + k + "-place"), list = mtEl("mt-" + k + "-plist");
+    mtEl("mt-" + k + "-mine").addEventListener("click", () => mtUseMine(k));
+    mtEl("mt-" + k + "-notime").addEventListener("change", () => { mtSyncNoTime(k); });
+    place.addEventListener("input", () => { mtSetCity(k, null); mtEl("mt-" + k + "-err").textContent = ""; mtRenderPlaces(k); });
+    place.addEventListener("focus", () => { if (!MT.city[k] && place.value.trim()) mtRenderPlaces(k); });
+    place.addEventListener("keydown", (e) => {
+      const open = !list.hidden;
+      if (e.key === "ArrowDown") { e.preventDefault(); if (!open) mtRenderPlaces(k); mtMoveOpt(k, 1); }
+      else if (e.key === "ArrowUp" && open) { e.preventDefault(); mtMoveOpt(k, -1); }
+      else if (e.key === "Enter" && open && MT.active[k] >= 0) { e.preventDefault(); mtPick(k, MT.shown[k][MT.active[k]]); }
+      else if (e.key === "Escape" && open) { e.preventDefault(); e.stopPropagation(); mtClosePlaces(k); }
+    });
+    list.addEventListener("mousedown", (e) => e.preventDefault());
+    list.addEventListener("click", (e) => { const li = e.target.closest("li[data-i]"); if (li) mtPick(k, MT.shown[k][Number(li.dataset.i)]); });
+    place.addEventListener("focusout", () => setTimeout(() => { if (!list.hidden && document.activeElement !== place) mtClosePlaces(k); }, 120));
+  });
+  mtMineButtons();
+  if (WANT_MATCH) showScreen("screen-match");
+  mtEl("mt-form").addEventListener("submit", (e) => { e.preventDefault(); mtSubmit(); });
+  mtEl("mt-edit").addEventListener("click", () => { mtShowResult(false); mtEl("mt-go").focus({ preventScroll: true }); });
+  mtEl("mt-report-btn").addEventListener("click", () => { const s = mtEl("mt-soon"); s.hidden = false; mtEl("mt-report-btn").setAttribute("aria-expanded", "true"); });
+  mtEl("mt-share-btn").addEventListener("click", mtOpenShare);
+  mtEl("mt-share-close").addEventListener("click", mtCloseShare);
+  mtEl("mt-share").addEventListener("click", (e) => { if (e.target === mtEl("mt-share")) mtCloseShare(); });
+  mtEl("mt-share-do").addEventListener("click", async () => {
+    try { if (mtShareFile) await navigator.share({ files: [mtShareFile], title: "Kundli matching" }); } catch (_) { /* cancelled */ }
+  });
+  document.addEventListener("keydown", (e) => {
+    if (mtEl("mt-share").hidden) return;
+    if (e.key === "Escape") { e.preventDefault(); mtCloseShare(); return; }
+    if (e.key === "Tab") { // keep focus inside the card sheet
+      const f = [...mtEl("mt-share").querySelectorAll("button, a[href]")].filter((x) => !x.hidden && x.getClientRects().length);
+      if (!f.length) return;
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+}
+
 // ================= AUTH (splash, plan hand-off, forgot / reset password, Google) =================
 function initAuth() {
   // Packaged-app splash buttons.
@@ -7637,6 +8446,7 @@ function initHome() {
 // see the state comment above) and account deletion (which additionally
 // clears those too, since there's no account left for them to belong to).
 function resetLocalSessionState() {
+  if (typeof mtResetAll === "function") mtResetAll(); // another person on this device must not see the last couple's details
   Object.assign(state, {
     user: null, birth: { year: null, month: null, day: null, hour: 12, minute: 0, unknownTime: false, city: null },
     computed: { sunIdx: null, moonIdx: null, ascIdx: null, moonPhase: null, moonNakshatra: null, venusIdx: null, marsIdx: null, dasha: null }, palmAnswers: {}, palmReport: null,
@@ -9718,6 +10528,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initChat();
   initExpertChat();
   initHome();
+  initMatch();
   initKundli();
   initCommunity();
   initSettings();

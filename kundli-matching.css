@@ -122,3 +122,6 @@
   .nk-km-waitlist { flex-direction: column; align-items: stretch; }
   .nk-km-waitlist input, .nk-km-waitlist button { width: 100%; }
 }
+
+.nk-km-cta-row { display: flex; justify-content: center; }
+@media (max-width: 640px) { .nk-km-cta-row .nk-btn { width: 100%; justify-content: center; text-align: center; } }
